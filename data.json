@@ -1,0 +1,1611 @@
+{
+  "meta": {
+    "updated": "2026-10-29",
+    "window": "2025-10-27 — 2026-10-27",
+    "source_count": 23,
+    "record_count": 54,
+    "topic_count": 26,
+    "privacy": "仅原创摘要和链接；未发布登录态、积分区原文、私有缓存或用户个人信息。"
+  },
+  "topics": [
+    {
+      "id": "journey",
+      "title": "User Journey / Action Log Trie",
+      "round": "Coding",
+      "match": "高度对应",
+      "summary": "日志按用户分组、按时间排序，聚合 journey 前缀计数，输出树。",
+      "drill": "先做 Trie 基础，再按原帖写完整日志→聚合树→格式化输出。确认乱序、重复 action、相同时间戳规则。",
+      "links": [
+        {
+          "title": "Hack2Hire · User Journey Paths",
+          "url": "https://www.hack2hire.com/question-bank/companies/whatnot/coding-questions/6a2091bf8b879849ebc118ab/practice?questionId=6a2091c38b879849ebc118ad",
+          "note": "题干高度对应；完整题面/测试/解法需要订阅"
+        },
+        {
+          "title": "LeetCode 208",
+          "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+          "note": "仅 Trie 基础，不是完整日志题；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+        }
+      ],
+      "follow": "部分原帖报告 streaming 输入；是否允许乱序/迟到事件要先确认，不能只在序列末尾追加。",
+      "sources": [
+        {
+          "id": 1194754,
+          "date": "2026-10-27",
+          "url": "https://www.1point3acres.com/home/thread/1194754",
+          "track": "SWE/SDE（方向未说明）"
+        },
+        {
+          "id": 1182119,
+          "date": "2026-07-04",
+          "url": "https://www.1point3acres.com/home/thread/1182119",
+          "track": "SWE/SDE（原帖未注明具体方向） · 通用软件工程"
+        },
+        {
+          "id": 1176409,
+          "date": "2026-05-11",
+          "url": "https://www.1point3acres.com/home/thread/1176409",
+          "track": "SWE（级别未报告） · 通用 SWE"
+        },
+        {
+          "id": 1171016,
+          "date": "2026-03-31",
+          "url": "https://www.1point3acres.com/home/thread/1171016",
+          "track": "SWE/SDE（具体岗位/级别未报告；作者背景为 backend + data eng） · 后端/数据工程背景（岗位未明）"
+        }
+      ],
+      "records": [
+        {
+          "source": 1194754,
+          "section": "coding",
+          "index": 0,
+          "topic": "journey"
+        },
+        {
+          "source": 1182119,
+          "section": "coding",
+          "index": 0,
+          "topic": "journey"
+        },
+        {
+          "source": 1176409,
+          "section": "coding",
+          "index": 0,
+          "topic": "journey"
+        },
+        {
+          "source": 1171016,
+          "section": "coding",
+          "index": 0,
+          "topic": "journey"
+        }
+      ]
+    },
+    {
+      "id": "duplicates",
+      "title": "相邻重复字符 / Candy Crush",
+      "round": "Coding",
+      "match": "原题 + 变体",
+      "summary": "栈消除相邻重复字符；追问可能是固定 k 个，或整个重复段。",
+      "drill": "先独立完成 1047→1209，再练不带 k 的整段消除。逐轮删除与扫描消除的语义先确认。",
+      "links": [
+        {
+          "title": "LeetCode 1047",
+          "url": "https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/",
+          "note": "多帖明确报告原题；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+        },
+        {
+          "title": "LeetCode 1209",
+          "url": "https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/",
+          "note": "固定 k；不等同于无 k 整段删除；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+        }
+      ],
+      "follow": "必须区别：删相邻一对 / 恰好 k 个 / 删除整段；不能把 1209 直接当所有 follow-up 的答案。",
+      "sources": [
+        {
+          "id": 1194240,
+          "date": "2026-10-23",
+          "url": "https://www.1point3acres.com/home/thread/1194240",
+          "track": "SWE/SDE（楼主）；mobile（仅评论区补充）"
+        },
+        {
+          "id": 1193667,
+          "date": "2026-10-19",
+          "url": "https://www.1point3acres.com/home/thread/1193667",
+          "track": "SWE/SDE（方向未说明）"
+        },
+        {
+          "id": 1182950,
+          "date": "2026-07-14",
+          "url": "https://www.1point3acres.com/home/thread/1182950",
+          "track": "Software Engineer · 通用软件工程"
+        },
+        {
+          "id": 1181062,
+          "date": "2026-06-23",
+          "url": "https://www.1point3acres.com/home/thread/1181062",
+          "track": "SWE/SDE（方向未说明）"
+        },
+        {
+          "id": 1179398,
+          "date": "2026-06-06",
+          "url": "https://www.1point3acres.com/home/thread/1179398",
+          "track": "SWE/SDE（方向未说明）"
+        },
+        {
+          "id": 1177299,
+          "date": "2026-05-19",
+          "url": "https://www.1point3acres.com/home/thread/1177299",
+          "track": "SWE/SDE（方向未说明）"
+        }
+      ],
+      "records": [
+        {
+          "source": 1194240,
+          "section": "coding",
+          "index": 0,
+          "topic": "duplicates"
+        },
+        {
+          "source": 1193667,
+          "section": "coding",
+          "index": 1,
+          "topic": "duplicates"
+        },
+        {
+          "source": 1182950,
+          "section": "coding",
+          "index": 0,
+          "topic": "duplicates"
+        },
+        {
+          "source": 1181062,
+          "section": "coding",
+          "index": 0,
+          "topic": "duplicates"
+        },
+        {
+          "source": 1179398,
+          "section": "coding",
+          "index": 0,
+          "topic": "duplicates"
+        },
+        {
+          "source": 1177299,
+          "section": "coding",
+          "index": 0,
+          "topic": "duplicates"
+        }
+      ]
+    },
+    {
+      "id": "palindrome",
+      "title": "Valid Palindrome II → 最多删 k 个",
+      "round": "Coding",
+      "match": "原题 + 变体",
+      "summary": "判断最多删一个字符能否成回文；追问最多删 k 个。",
+      "drill": "680 限时做，再讲 k 版本状态与记忆化；大 k 讨论动态规划复杂度。",
+      "links": [
+        {
+          "title": "LeetCode 680",
+          "url": "https://leetcode.com/problems/valid-palindrome-ii/",
+          "note": "主问题明确报告；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+        }
+      ],
+      "follow": "k 版本不是简单把双指针循环重复 k 次。",
+      "sources": [
+        {
+          "id": 1193667,
+          "date": "2026-10-19",
+          "url": "https://www.1point3acres.com/home/thread/1193667",
+          "track": "SWE/SDE（方向未说明）"
+        },
+        {
+          "id": 1153547,
+          "date": "2025-11-07",
+          "url": "https://www.1point3acres.com/home/thread/1153547",
+          "track": "SDE New Grad · 通用软件工程"
+        }
+      ],
+      "records": [
+        {
+          "source": 1193667,
+          "section": "coding",
+          "index": 0,
+          "topic": "palindrome"
+        },
+        {
+          "source": 1153547,
+          "section": "coding",
+          "index": 1,
+          "topic": "palindrome"
+        }
+      ]
+    },
+    {
+      "id": "knight",
+      "title": "Knight Dialer · 指定起点",
+      "round": "Coding",
+      "match": "变体",
+      "summary": "电话键盘上骑士移动，统计固定起点和跳数的数字序列。",
+      "drill": "935 先练 DP，再把初始状态改为指定 digit；确认 hops 与序列长度差 1。",
+      "links": [
+        {
+          "title": "LeetCode 935",
+          "url": "https://leetcode.com/problems/knight-dialer/",
+          "note": "原题对所有起点求和；面经常给 start_digit；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+        }
+      ],
+      "follow": "确认是否需要取模；不要把 LC 的取模要求默认为面试要求。",
+      "sources": [
+        {
+          "id": 1194240,
+          "date": "2026-10-23",
+          "url": "https://www.1point3acres.com/home/thread/1194240",
+          "track": "SWE/SDE（楼主）；mobile（仅评论区补充）"
+        },
+        {
+          "id": 1181388,
+          "date": "2026-06-26",
+          "url": "https://www.1point3acres.com/home/thread/1181388",
+          "track": "SWE/SDE（原帖未注明具体方向） · 通用软件工程"
+        }
+      ],
+      "records": [
+        {
+          "source": 1194240,
+          "section": "coding",
+          "index": 1,
+          "topic": "knight"
+        },
+        {
+          "source": 1181388,
+          "section": "coding",
+          "index": 1,
+          "topic": "knight"
+        }
+      ]
+    },
+    {
+      "id": "sparse",
+      "title": "Dot Product → Sparse Vectors",
+      "round": "Coding",
+      "match": "高度对应",
+      "summary": "先计算普通向量点积，再利用稀疏结构优化。",
+      "drill": "先写普通数组版，再做索引→值、双指针非零列表，并比较稠密×稀疏情况。",
+      "links": [
+        {
+          "title": "LeetCode 1570",
+          "url": "https://leetcode.com/problems/dot-product-of-two-sparse-vectors/",
+          "note": "稀疏 follow-up 对应；可能需要 Premium；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+        }
+      ],
+      "follow": "",
+      "sources": [
+        {
+          "id": 1181388,
+          "date": "2026-06-26",
+          "url": "https://www.1point3acres.com/home/thread/1181388",
+          "track": "SWE/SDE（原帖未注明具体方向） · 通用软件工程"
+        }
+      ],
+      "records": [
+        {
+          "source": 1181388,
+          "section": "coding",
+          "index": 0,
+          "topic": "sparse"
+        }
+      ]
+    },
+    {
+      "id": "merge",
+      "title": "Merge Two Sorted Arrays",
+      "round": "Coding",
+      "match": "高度对应",
+      "summary": "合并两个有序数组。",
+      "drill": "先问返回新数组还是原地；从清楚的双指针开始，不一开始就堆四指针优化。",
+      "links": [
+        {
+          "title": "LeetCode 88",
+          "url": "https://leetcode.com/problems/merge-sorted-array/",
+          "note": "LC 88 要求原地；报告未必要求原地；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+        }
+      ],
+      "follow": "",
+      "sources": [
+        {
+          "id": 1182950,
+          "date": "2026-07-14",
+          "url": "https://www.1point3acres.com/home/thread/1182950",
+          "track": "Software Engineer · 通用软件工程"
+        }
+      ],
+      "records": [
+        {
+          "source": 1182950,
+          "section": "coding",
+          "index": 1,
+          "topic": "merge"
+        }
+      ]
+    },
+    {
+      "id": "squares",
+      "title": "Squares of a Sorted Array",
+      "round": "Coding",
+      "match": "原题",
+      "summary": "包含负数的有序数组，返回有序平方数组。",
+      "drill": "977 独立完成 O(n) 双指针，覆盖全负数、0、正负绝对值相等。",
+      "links": [
+        {
+          "title": "LeetCode 977",
+          "url": "https://leetcode.com/problems/squares-of-a-sorted-array/",
+          "note": "原帖明确题号；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+        }
+      ],
+      "follow": "",
+      "sources": [
+        {
+          "id": 1179398,
+          "date": "2026-06-06",
+          "url": "https://www.1point3acres.com/home/thread/1179398",
+          "track": "SWE/SDE（方向未说明）"
+        }
+      ],
+      "records": [
+        {
+          "source": 1179398,
+          "section": "coding",
+          "index": 1,
+          "topic": "squares"
+        }
+      ]
+    },
+    {
+      "id": "merge-squares",
+      "title": "合并数组 + 平方的模糊变体",
+      "round": "Coding",
+      "match": "仅相关练习",
+      "summary": "一帖使用 LC 88 的谐音题号，并描述有序平方/负数追问；精确操作未披露。",
+      "drill": "把 88 与 977 分开做；不要把含糊描述修正成已经确认的原题。",
+      "links": [
+        {
+          "title": "LeetCode 88",
+          "url": "https://leetcode.com/problems/merge-sorted-array/",
+          "note": "原帖谐音题号，保留不确定性；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+        },
+        {
+          "title": "LeetCode 977",
+          "url": "https://leetcode.com/problems/squares-of-a-sorted-array/",
+          "note": "只作负数平方技能覆盖；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+        }
+      ],
+      "follow": "",
+      "sources": [
+        {
+          "id": 1177299,
+          "date": "2026-05-19",
+          "url": "https://www.1point3acres.com/home/thread/1177299",
+          "track": "SWE/SDE（方向未说明）"
+        }
+      ],
+      "records": [
+        {
+          "source": 1177299,
+          "section": "coding",
+          "index": 1,
+          "topic": "merge-squares"
+        }
+      ]
+    },
+    {
+      "id": "unsafe",
+      "title": "Unsafe Words → Unsafe Phrases",
+      "round": "Coding",
+      "match": "高度对应",
+      "summary": "过滤含不安全词的消息；扩展到连续多词短语。",
+      "drill": "先用 set 做整词匹配，再用 word-level Trie 做短语匹配。",
+      "links": [
+        {
+          "title": "Hack2Hire · Filter Unsafe Messages",
+          "url": "https://www.hack2hire.com/question-bank/companies/whatnot/coding-questions/6a2194398b879849ebc11fd3/practice?questionId=6a21945a8b879849ebc11fd4",
+          "note": "主问题页面标 FREE，含 Java starter；短语 follow-up 权限另看站点"
+        },
+        {
+          "title": "LeetCode 208",
+          "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+          "note": "Trie 基础；不替代完整消息题；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+        }
+      ],
+      "follow": "原帖存在两种标点规则：保留标点作为 token 一部分，或去标点。按对应原帖练，不能混成一种规则。",
+      "sources": [
+        {
+          "id": 1181062,
+          "date": "2026-06-23",
+          "url": "https://www.1point3acres.com/home/thread/1181062",
+          "track": "SWE/SDE（方向未说明）"
+        },
+        {
+          "id": 1169110,
+          "date": "2026-03-17",
+          "url": "https://www.1point3acres.com/home/thread/1169110",
+          "track": "SWE/SDE（具体岗位与级别未报告） · 通用 SWE"
+        },
+        {
+          "id": 1153547,
+          "date": "2025-11-07",
+          "url": "https://www.1point3acres.com/home/thread/1153547",
+          "track": "SDE New Grad · 通用软件工程"
+        }
+      ],
+      "records": [
+        {
+          "source": 1181062,
+          "section": "coding",
+          "index": 1,
+          "topic": "unsafe"
+        },
+        {
+          "source": 1169110,
+          "section": "coding",
+          "index": 0,
+          "topic": "unsafe"
+        },
+        {
+          "source": 1153547,
+          "section": "coding",
+          "index": 3,
+          "topic": "unsafe"
+        }
+      ]
+    },
+    {
+      "id": "notify",
+      "title": "Notification Quota + Cooldown",
+      "round": "Coding",
+      "match": "仅相关练习",
+      "summary": "每日不同 message 数量限制；追问达到上限后的 message 冷冻期与队列。",
+      "drill": "按原帖实现每日 quota，再单独加 cooldown。写跨天、重复消息、边界时间测试。",
+      "links": [
+        {
+          "title": "LeetCode 359",
+          "url": "https://leetcode.com/problems/logger-rate-limiter/",
+          "note": "仅 cooldown 技能相近；不覆盖每日不同消息 quota；可能需 Premium；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+        }
+      ],
+      "follow": "不能把标准 Logger Rate Limiter 等同于完整面经题。",
+      "sources": [
+        {
+          "id": 1153547,
+          "date": "2025-11-07",
+          "url": "https://www.1point3acres.com/home/thread/1153547",
+          "track": "SDE New Grad · 通用软件工程"
+        }
+      ],
+      "records": [
+        {
+          "source": 1153547,
+          "section": "coding",
+          "index": 2,
+          "topic": "notify"
+        }
+      ]
+    },
+    {
+      "id": "grid",
+      "title": "障碍 Grid → 最短路 / 可达出口",
+      "round": "Coding",
+      "match": "仅相关练习",
+      "summary": "逐步扩展的障碍地图题，具体方向/出口语义不完整。",
+      "drill": "BFS 最短路与 DFS 可达性各练一题；先确认四方向/八方向、起终点、出口定义。",
+      "links": [
+        {
+          "title": "LeetCode 1091",
+          "url": "https://leetcode.com/problems/shortest-path-in-binary-matrix/",
+          "note": "八方向 + 特定起终点，只练 BFS；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+        },
+        {
+          "title": "LeetCode 200",
+          "url": "https://leetcode.com/problems/number-of-islands/",
+          "note": "只练连通遍历；不等于可达出口；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+        }
+      ],
+      "follow": "",
+      "sources": [
+        {
+          "id": 1193987,
+          "date": "2026-10-22",
+          "url": "https://www.1point3acres.com/home/thread/1193987",
+          "track": "SWE/SDE（方向未说明）"
+        }
+      ],
+      "records": [
+        {
+          "source": 1193987,
+          "section": "coding",
+          "index": 0,
+          "topic": "grid"
+        }
+      ]
+    },
+    {
+      "id": "shopping",
+      "title": "Karat · 商店与 Shopping List",
+      "round": "Coding",
+      "match": "未找到可靠同题",
+      "summary": "根据商品店铺与 shopping list，最少次数买齐商品；约束不完整。",
+      "drill": "回原帖确认 shop/item 映射与优化目标后再编码。不把它硬套为最短路或集合覆盖。",
+      "links": [],
+      "follow": "",
+      "sources": [
+        {
+          "id": 1191371,
+          "date": "2026-09-30",
+          "url": "https://www.1point3acres.com/home/thread/1191371",
+          "track": "SWE/SDE（Karat；方向未说明）"
+        }
+      ],
+      "records": [
+        {
+          "source": 1191371,
+          "section": "coding",
+          "index": 0,
+          "topic": "shopping"
+        }
+      ]
+    },
+    {
+      "id": "cars",
+      "title": "Karat · 固定路线车辆与乘客分配",
+      "round": "Coding",
+      "match": "未找到可靠同题",
+      "summary": "给路线与 travel time，按最早到站车辆分配乘客。",
+      "drill": "用原帖做模拟：算到达时间，再分配乘客。先确认同一时刻 tie-break、转乘和容量是否存在。",
+      "links": [],
+      "follow": "",
+      "sources": [
+        {
+          "id": 1191371,
+          "date": "2026-09-30",
+          "url": "https://www.1point3acres.com/home/thread/1191371",
+          "track": "SWE/SDE（Karat；方向未说明）"
+        }
+      ],
+      "records": [
+        {
+          "source": 1191371,
+          "section": "coding",
+          "index": 1,
+          "topic": "cars"
+        }
+      ]
+    },
+    {
+      "id": "trails",
+      "title": "Karat · 每条 Trail 最多一次",
+      "round": "Coding",
+      "match": "未找到可靠同题",
+      "summary": "图中每条边最多经过一次，能否覆盖指定景点集合；不要求给定顺序。",
+      "drill": "以原帖练 DFS + 回溯 + 已用边状态；不要误用只访问节点一次，或直接当 Euler 全边遍历。",
+      "links": [],
+      "follow": "",
+      "sources": [
+        {
+          "id": 1191371,
+          "date": "2026-09-30",
+          "url": "https://www.1point3acres.com/home/thread/1191371",
+          "track": "SWE/SDE（Karat；方向未说明）"
+        }
+      ],
+      "records": [
+        {
+          "source": 1191371,
+          "section": "coding",
+          "index": 2,
+          "topic": "trails"
+        }
+      ]
+    },
+    {
+      "id": "badge",
+      "title": "Karat · 门禁刷卡",
+      "round": "Coding",
+      "match": "原帖指定入口",
+      "summary": "报告只指向门禁刷卡题库，没有披露是哪一子题。",
+      "drill": "先打开候选人给出的入口确认版本，再区分 missing enter/exit、时间窗口等不同题。",
+      "links": [
+        {
+          "title": "报告给出的简书题库",
+          "url": "https://www.jianshu.com/p/fdbcba5fe5bc",
+          "note": "来自原帖的引用；不是独立核验的完整题面，可能需登录"
+        }
+      ],
+      "follow": "",
+      "sources": [
+        {
+          "id": 1153547,
+          "date": "2025-11-07",
+          "url": "https://www.1point3acres.com/home/thread/1153547",
+          "track": "SDE New Grad · 通用软件工程"
+        }
+      ],
+      "records": [
+        {
+          "source": 1153547,
+          "section": "coding",
+          "index": 0,
+          "topic": "badge"
+        }
+      ]
+    },
+    {
+      "id": "tic",
+      "title": "Mobile · Tic Tac Toe App",
+      "round": "Mobile",
+      "match": "实作题，无等价 LC",
+      "summary": "45 分钟左右完成一个小游戏 App，而不是只实现胜负判断函数。",
+      "drill": "用 SwiftUI/UIKit 写棋盘、回合、胜负、平局和重开；计时。不要用算法版 Tic Tac Toe 替代完整 UI。",
+      "links": [],
+      "follow": "",
+      "sources": [
+        {
+          "id": 1176456,
+          "date": "2026-05-12",
+          "url": "https://www.1point3acres.com/home/thread/1176456",
+          "track": "Mobile Engineer · 移动端 / iOS"
+        }
+      ],
+      "records": [
+        {
+          "source": 1176456,
+          "section": "coding",
+          "index": 0,
+          "topic": "tic"
+        }
+      ]
+    },
+    {
+      "id": "lists",
+      "title": "Mobile · 双 List View 状态同步",
+      "round": "Mobile",
+      "match": "实作题，无等价 LC",
+      "summary": "两处列表展示同一数据，fetch/update 后保持一致。",
+      "drill": "使用单一数据源，练加载、更新、共享状态和错误处理；具体网络/持久化需求原帖未确认。",
+      "links": [],
+      "follow": "",
+      "sources": [
+        {
+          "id": 1176456,
+          "date": "2026-05-12",
+          "url": "https://www.1point3acres.com/home/thread/1176456",
+          "track": "Mobile Engineer · 移动端 / iOS"
+        }
+      ],
+      "records": [
+        {
+          "source": 1176456,
+          "section": "coding",
+          "index": 1,
+          "topic": "lists"
+        }
+      ]
+    },
+    {
+      "id": "unknown-coding",
+      "title": "未披露 / 隐藏的 Coding",
+      "round": "Coding",
+      "match": "不可映射",
+      "summary": "部分报告只有“题库题”、难度或受限链接，没有可见题面。",
+      "drill": "仅保留原帖入口。没有足够信息时不猜题，也不把其他公司的常见题塞进来。",
+      "links": [],
+      "follow": "",
+      "sources": [
+        {
+          "id": 1193074,
+          "date": "2026-10-14",
+          "url": "https://www.1point3acres.com/home/thread/1193074",
+          "track": "SWE/SDE（方向未说明）"
+        },
+        {
+          "id": 1192258,
+          "date": "2026-10-07",
+          "url": "https://www.1point3acres.com/home/thread/1192258",
+          "track": "SWE/SDE（方向未说明）"
+        },
+        {
+          "id": 1179933,
+          "date": "2026-06-11",
+          "url": "https://www.1point3acres.com/home/thread/1179933",
+          "track": "SWE/SDE（原帖未注明具体方向） · 通用软件工程"
+        },
+        {
+          "id": 1177922,
+          "date": "2026-05-24",
+          "url": "https://www.1point3acres.com/home/thread/1177922",
+          "track": "SWE/SDE（具体方向与级别未报告） · 通用后端/全栈（未明确）"
+        },
+        {
+          "id": 1176456,
+          "date": "2026-05-12",
+          "url": "https://www.1point3acres.com/home/thread/1176456",
+          "track": "Mobile Engineer · 移动端 / iOS"
+        }
+      ],
+      "records": [
+        {
+          "source": 1193074,
+          "section": "coding",
+          "index": 0,
+          "topic": "unknown-coding"
+        },
+        {
+          "source": 1192258,
+          "section": "coding",
+          "index": 0,
+          "topic": "unknown-coding"
+        },
+        {
+          "source": 1179933,
+          "section": "coding",
+          "index": 0,
+          "topic": "unknown-coding"
+        },
+        {
+          "source": 1177922,
+          "section": "coding",
+          "index": 0,
+          "topic": "unknown-coding"
+        },
+        {
+          "source": 1176456,
+          "section": "coding",
+          "index": 2,
+          "topic": "unknown-coding"
+        }
+      ]
+    },
+    {
+      "id": "sd-metrics",
+      "title": "Design Metrics Monitoring + Alerting",
+      "round": "System Design",
+      "match": "高度对应",
+      "summary": "指标采集、time-series 存储、查询与告警。",
+      "drill": "白板讲 ingest→storage→query→alerting，再追问 TSDB 与 high-cardinality / series explosion。",
+      "links": [
+        {
+          "title": "Hello Interview · Metrics Monitoring",
+          "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/metrics-monitoring",
+          "note": "正文可见；完整视频需要 Premium"
+        }
+      ],
+      "follow": "time-series DB 选择与 series explosion 是原帖明确追问。",
+      "sources": [
+        {
+          "id": 1194754,
+          "date": "2026-10-27",
+          "url": "https://www.1point3acres.com/home/thread/1194754",
+          "track": "SWE/SDE（方向未说明）"
+        },
+        {
+          "id": 1194240,
+          "date": "2026-10-23",
+          "url": "https://www.1point3acres.com/home/thread/1194240",
+          "track": "SWE/SDE（楼主）；mobile（仅评论区补充）"
+        }
+      ],
+      "records": [
+        {
+          "source": 1194754,
+          "section": "system_design",
+          "index": 0,
+          "topic": "sd-metrics"
+        },
+        {
+          "source": 1194240,
+          "section": "system_design",
+          "index": 0,
+          "topic": "sd-metrics"
+        }
+      ]
+    },
+    {
+      "id": "sd-donation",
+      "title": "Design Online Donation Service",
+      "round": "System Design",
+      "match": "高度对应，需求有差异",
+      "summary": "第三方支付处理的捐款网站，重视异步处理。",
+      "drill": "先按面经范围讲支付状态、消息队列和重试；幂等/对账为准备扩展，别当成全部是 reported follow-up。",
+      "links": [
+        {
+          "title": "Hack2Hire · Online Donation Service",
+          "url": "https://www.hack2hire.com/question-bank/companies/whatnot/system-design/69e45d03ad1522fdaff14ac5",
+          "note": "公开引言可读；完整文章需要订阅"
+        }
+      ],
+      "follow": "一帖明确“不用 webhook”；不要强行照教程引入 webhook。",
+      "sources": [
+        {
+          "id": 1193074,
+          "date": "2026-10-14",
+          "url": "https://www.1point3acres.com/home/thread/1193074",
+          "track": "SWE/SDE（方向未说明）"
+        },
+        {
+          "id": 1177922,
+          "date": "2026-05-24",
+          "url": "https://www.1point3acres.com/home/thread/1177922",
+          "track": "SWE/SDE（具体方向与级别未报告） · 通用后端/全栈（未明确）"
+        }
+      ],
+      "records": [
+        {
+          "source": 1193074,
+          "section": "system_design",
+          "index": 0,
+          "topic": "sd-donation"
+        },
+        {
+          "source": 1177922,
+          "section": "system_design",
+          "index": 0,
+          "topic": "sd-donation"
+        }
+      ]
+    },
+    {
+      "id": "sd-messaging",
+      "title": "Buyer–Seller Messaging / WhatsApp",
+      "round": "System Design",
+      "match": "高度对应，需求有差异",
+      "summary": "买家卖家实时聊天、离线消息、多设备一致性。",
+      "drill": "用 WhatsApp 拆解连接/投递/存储，然后裁剪到 web-only 电商 DM；补离线 SMS/email。",
+      "links": [
+        {
+          "title": "Hello Interview · WhatsApp",
+          "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/whatsapp",
+          "note": "正文可读；教程范围含群聊，面经未必要求"
+        }
+      ],
+      "follow": "",
+      "sources": [
+        {
+          "id": 1182119,
+          "date": "2026-07-04",
+          "url": "https://www.1point3acres.com/home/thread/1182119",
+          "track": "SWE/SDE（原帖未注明具体方向） · 通用软件工程"
+        },
+        {
+          "id": 1181388,
+          "date": "2026-06-26",
+          "url": "https://www.1point3acres.com/home/thread/1181388",
+          "track": "SWE/SDE（原帖未注明具体方向） · 通用软件工程"
+        }
+      ],
+      "records": [
+        {
+          "source": 1182119,
+          "section": "system_design",
+          "index": 0,
+          "topic": "sd-messaging"
+        },
+        {
+          "source": 1181388,
+          "section": "system_design",
+          "index": 0,
+          "topic": "sd-messaging"
+        }
+      ]
+    },
+    {
+      "id": "sd-leetcode",
+      "title": "Design LeetCode / Online Judge",
+      "round": "System Design",
+      "match": "高度对应",
+      "summary": "提交并运行用户代码，判题；部分报告扩展到比赛。",
+      "drill": "优先讲安全执行、任务队列、测试数据和结果存储，再练比赛突发流量。",
+      "links": [
+        {
+          "title": "Hack2Hire · Design Leetcode",
+          "url": "https://www.hack2hire.com/question-bank/companies/whatnot/system-design/69d98d1ed94fcdd01529ff91",
+          "note": "页面标 FREE；登录才能保存进度/答 quiz"
+        }
+      ],
+      "follow": "原帖明确追问包括 signed URL、比赛扩容、运行提交代码、DB 选择；来自不同报告，不是一场面试全部问到。",
+      "sources": [
+        {
+          "id": 1179933,
+          "date": "2026-06-11",
+          "url": "https://www.1point3acres.com/home/thread/1179933",
+          "track": "SWE/SDE（原帖未注明具体方向） · 通用软件工程"
+        },
+        {
+          "id": 1179398,
+          "date": "2026-06-06",
+          "url": "https://www.1point3acres.com/home/thread/1179398",
+          "track": "SWE/SDE（方向未说明）"
+        },
+        {
+          "id": 1177299,
+          "date": "2026-05-19",
+          "url": "https://www.1point3acres.com/home/thread/1177299",
+          "track": "SWE/SDE（方向未说明）"
+        },
+        {
+          "id": 1174853,
+          "date": "2026-04-28",
+          "url": "https://www.1point3acres.com/home/thread/1174853",
+          "track": "SWE/SDE（岗位与级别未报告；作者自述为前端背景） · 前端背景（单独标注）"
+        }
+      ],
+      "records": [
+        {
+          "source": 1179933,
+          "section": "system_design",
+          "index": 0,
+          "topic": "sd-leetcode"
+        },
+        {
+          "source": 1179398,
+          "section": "system_design",
+          "index": 0,
+          "topic": "sd-leetcode"
+        },
+        {
+          "source": 1177299,
+          "section": "system_design",
+          "index": 0,
+          "topic": "sd-leetcode"
+        },
+        {
+          "source": 1174853,
+          "section": "system_design",
+          "index": 0,
+          "topic": "sd-leetcode"
+        }
+      ]
+    },
+    {
+      "id": "unknown-sd",
+      "title": "隐藏的 System Design",
+      "round": "System Design",
+      "match": "不可映射",
+      "summary": "积分区内容不可见，主题未知。",
+      "drill": "只保留原帖；不补猜主题。",
+      "links": [],
+      "follow": "",
+      "sources": [
+        {
+          "id": 1192258,
+          "date": "2026-10-07",
+          "url": "https://www.1point3acres.com/home/thread/1192258",
+          "track": "SWE/SDE（方向未说明）"
+        }
+      ],
+      "records": [
+        {
+          "source": 1192258,
+          "section": "system_design",
+          "index": 0,
+          "topic": "unknown-sd"
+        }
+      ]
+    },
+    {
+      "id": "bq",
+      "title": "BQ · Why Whatnot / 项目 / Ownership",
+      "round": "BQ",
+      "match": "框架练习，不是原题答案",
+      "summary": "动机、喜欢的工作经历、超出职责解决问题及项目深挖。",
+      "drill": "准备真实经历，每题录音练 2–3 分钟：你的行动、选择依据、可量化结果；不编故事。",
+      "links": [
+        {
+          "title": "Hello Interview · Behavioral",
+          "url": "https://www.hellointerview.com/learn/behavioral/overview/introduction",
+          "note": "通用 BQ 框架，不代表 Whatnot 特定评分标准"
+        }
+      ],
+      "follow": "",
+      "sources": [
+        {
+          "id": 1190693,
+          "date": "2026-09-24",
+          "url": "https://www.1point3acres.com/home/thread/1190693",
+          "track": "SWE/SDE（原帖未注明具体方向） · 通用软件工程"
+        },
+        {
+          "id": 1158651,
+          "date": "2025-12-19",
+          "url": "https://www.1point3acres.com/home/thread/1158651",
+          "track": "前端工程师（上海团队；级别未报告） · 前端（单独标注）"
+        }
+      ],
+      "records": [
+        {
+          "source": 1190693,
+          "section": "behavioral",
+          "index": 0,
+          "topic": "bq"
+        },
+        {
+          "source": 1190693,
+          "section": "behavioral",
+          "index": 1,
+          "topic": "bq"
+        },
+        {
+          "source": 1190693,
+          "section": "behavioral",
+          "index": 2,
+          "topic": "bq"
+        },
+        {
+          "source": 1158651,
+          "section": "behavioral",
+          "index": 0,
+          "topic": "bq"
+        }
+      ]
+    },
+    {
+      "id": "product",
+      "title": "Product Sense · Improve Whatnot",
+      "round": "Product Sense",
+      "match": "框架练习，不是完整同题",
+      "summary": "分析 Whatnot 的用户痛点，提改进方案并解释风险、指标与推广。",
+      "drill": "选 buyer/seller 一类用户→痛点→方案→简单 UX→成功指标/guardrail→A/B test→rollout。按 SWE 范围练，不混入 PM 面经统计。",
+      "links": [
+        {
+          "title": "Exponent/Aced · Product Sense Guide",
+          "url": "https://tryexponent.com/blog/product-sense-interview",
+          "note": "仅借用产品分析框架；资源偏 PM，不当作 Whatnot SWE 面经"
+        }
+      ],
+      "follow": "原帖明确话题包括 UI、trade-off、risk、promotion、成功率、A/B test、对其他用户影响；各帖覆盖不完全相同。",
+      "sources": [
+        {
+          "id": 1194240,
+          "date": "2026-10-23",
+          "url": "https://www.1point3acres.com/home/thread/1194240",
+          "track": "SWE/SDE（楼主）；mobile（仅评论区补充）"
+        },
+        {
+          "id": 1190693,
+          "date": "2026-09-24",
+          "url": "https://www.1point3acres.com/home/thread/1190693",
+          "track": "SWE/SDE（原帖未注明具体方向） · 通用软件工程"
+        },
+        {
+          "id": 1176456,
+          "date": "2026-05-12",
+          "url": "https://www.1point3acres.com/home/thread/1176456",
+          "track": "Mobile Engineer · 移动端 / iOS"
+        },
+        {
+          "id": 1158651,
+          "date": "2025-12-19",
+          "url": "https://www.1point3acres.com/home/thread/1158651",
+          "track": "前端工程师（上海团队；级别未报告） · 前端（单独标注）"
+        }
+      ],
+      "records": [
+        {
+          "source": 1194240,
+          "section": "product_sense",
+          "index": 0,
+          "topic": "product"
+        },
+        {
+          "source": 1190693,
+          "section": "product_sense",
+          "index": 0,
+          "topic": "product"
+        },
+        {
+          "source": 1176456,
+          "section": "product_sense",
+          "index": 0,
+          "topic": "product"
+        },
+        {
+          "source": 1158651,
+          "section": "product_sense",
+          "index": 0,
+          "topic": "product"
+        }
+      ]
+    },
+    {
+      "id": "unknown-product",
+      "title": "未披露具体题目的 Product Sense",
+      "round": "Product Sense",
+      "match": "不可映射",
+      "summary": "有报告只说明 Product Sense 时长，没有题目。",
+      "drill": "用上一项通用框架练习，但不能说它就是这篇报告的原题。",
+      "links": [],
+      "follow": "",
+      "sources": [
+        {
+          "id": 1153547,
+          "date": "2025-11-07",
+          "url": "https://www.1point3acres.com/home/thread/1153547",
+          "track": "SDE New Grad · 通用软件工程"
+        }
+      ],
+      "records": [
+        {
+          "source": 1153547,
+          "section": "product_sense",
+          "index": 0,
+          "topic": "unknown-product"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": 1194754,
+      "date": "2026-10-27",
+      "url": "https://www.1point3acres.com/home/thread/1194754",
+      "track": "SWE/SDE（方向未说明）"
+    },
+    {
+      "id": 1194240,
+      "date": "2026-10-23",
+      "url": "https://www.1point3acres.com/home/thread/1194240",
+      "track": "SWE/SDE（楼主）；mobile（仅评论区补充）"
+    },
+    {
+      "id": 1193987,
+      "date": "2026-10-22",
+      "url": "https://www.1point3acres.com/home/thread/1193987",
+      "track": "SWE/SDE（方向未说明）"
+    },
+    {
+      "id": 1193667,
+      "date": "2026-10-19",
+      "url": "https://www.1point3acres.com/home/thread/1193667",
+      "track": "SWE/SDE（方向未说明）"
+    },
+    {
+      "id": 1193074,
+      "date": "2026-10-14",
+      "url": "https://www.1point3acres.com/home/thread/1193074",
+      "track": "SWE/SDE（方向未说明）"
+    },
+    {
+      "id": 1192258,
+      "date": "2026-10-07",
+      "url": "https://www.1point3acres.com/home/thread/1192258",
+      "track": "SWE/SDE（方向未说明）"
+    },
+    {
+      "id": 1191371,
+      "date": "2026-09-30",
+      "url": "https://www.1point3acres.com/home/thread/1191371",
+      "track": "SWE/SDE（Karat；方向未说明）"
+    },
+    {
+      "id": 1190693,
+      "date": "2026-09-24",
+      "url": "https://www.1point3acres.com/home/thread/1190693",
+      "track": "SWE/SDE（原帖未注明具体方向） · 通用软件工程"
+    },
+    {
+      "id": 1182950,
+      "date": "2026-07-14",
+      "url": "https://www.1point3acres.com/home/thread/1182950",
+      "track": "Software Engineer · 通用软件工程"
+    },
+    {
+      "id": 1182119,
+      "date": "2026-07-04",
+      "url": "https://www.1point3acres.com/home/thread/1182119",
+      "track": "SWE/SDE（原帖未注明具体方向） · 通用软件工程"
+    },
+    {
+      "id": 1181388,
+      "date": "2026-06-26",
+      "url": "https://www.1point3acres.com/home/thread/1181388",
+      "track": "SWE/SDE（原帖未注明具体方向） · 通用软件工程"
+    },
+    {
+      "id": 1181062,
+      "date": "2026-06-23",
+      "url": "https://www.1point3acres.com/home/thread/1181062",
+      "track": "SWE/SDE（方向未说明）"
+    },
+    {
+      "id": 1179933,
+      "date": "2026-06-11",
+      "url": "https://www.1point3acres.com/home/thread/1179933",
+      "track": "SWE/SDE（原帖未注明具体方向） · 通用软件工程"
+    },
+    {
+      "id": 1179398,
+      "date": "2026-06-06",
+      "url": "https://www.1point3acres.com/home/thread/1179398",
+      "track": "SWE/SDE（方向未说明）"
+    },
+    {
+      "id": 1177922,
+      "date": "2026-05-24",
+      "url": "https://www.1point3acres.com/home/thread/1177922",
+      "track": "SWE/SDE（具体方向与级别未报告） · 通用后端/全栈（未明确）"
+    },
+    {
+      "id": 1177299,
+      "date": "2026-05-19",
+      "url": "https://www.1point3acres.com/home/thread/1177299",
+      "track": "SWE/SDE（方向未说明）"
+    },
+    {
+      "id": 1176456,
+      "date": "2026-05-12",
+      "url": "https://www.1point3acres.com/home/thread/1176456",
+      "track": "Mobile Engineer · 移动端 / iOS"
+    },
+    {
+      "id": 1176409,
+      "date": "2026-05-11",
+      "url": "https://www.1point3acres.com/home/thread/1176409",
+      "track": "SWE（级别未报告） · 通用 SWE"
+    },
+    {
+      "id": 1174853,
+      "date": "2026-04-28",
+      "url": "https://www.1point3acres.com/home/thread/1174853",
+      "track": "SWE/SDE（岗位与级别未报告；作者自述为前端背景） · 前端背景（单独标注）"
+    },
+    {
+      "id": 1171016,
+      "date": "2026-03-31",
+      "url": "https://www.1point3acres.com/home/thread/1171016",
+      "track": "SWE/SDE（具体岗位/级别未报告；作者背景为 backend + data eng） · 后端/数据工程背景（岗位未明）"
+    },
+    {
+      "id": 1169110,
+      "date": "2026-03-17",
+      "url": "https://www.1point3acres.com/home/thread/1169110",
+      "track": "SWE/SDE（具体岗位与级别未报告） · 通用 SWE"
+    },
+    {
+      "id": 1158651,
+      "date": "2025-12-19",
+      "url": "https://www.1point3acres.com/home/thread/1158651",
+      "track": "前端工程师（上海团队；级别未报告） · 前端（单独标注）"
+    },
+    {
+      "id": 1153547,
+      "date": "2025-11-07",
+      "url": "https://www.1point3acres.com/home/thread/1153547",
+      "track": "SDE New Grad · 通用软件工程"
+    }
+  ],
+  "records": [
+    {
+      "source": 1194754,
+      "section": "coding",
+      "index": 0,
+      "topic": "journey"
+    },
+    {
+      "source": 1194754,
+      "section": "system_design",
+      "index": 0,
+      "topic": "sd-metrics"
+    },
+    {
+      "source": 1194240,
+      "section": "coding",
+      "index": 0,
+      "topic": "duplicates"
+    },
+    {
+      "source": 1194240,
+      "section": "coding",
+      "index": 1,
+      "topic": "knight"
+    },
+    {
+      "source": 1194240,
+      "section": "system_design",
+      "index": 0,
+      "topic": "sd-metrics"
+    },
+    {
+      "source": 1194240,
+      "section": "product_sense",
+      "index": 0,
+      "topic": "product"
+    },
+    {
+      "source": 1193987,
+      "section": "coding",
+      "index": 0,
+      "topic": "grid"
+    },
+    {
+      "source": 1193667,
+      "section": "coding",
+      "index": 0,
+      "topic": "palindrome"
+    },
+    {
+      "source": 1193667,
+      "section": "coding",
+      "index": 1,
+      "topic": "duplicates"
+    },
+    {
+      "source": 1193074,
+      "section": "coding",
+      "index": 0,
+      "topic": "unknown-coding"
+    },
+    {
+      "source": 1193074,
+      "section": "system_design",
+      "index": 0,
+      "topic": "sd-donation"
+    },
+    {
+      "source": 1192258,
+      "section": "coding",
+      "index": 0,
+      "topic": "unknown-coding"
+    },
+    {
+      "source": 1192258,
+      "section": "system_design",
+      "index": 0,
+      "topic": "unknown-sd"
+    },
+    {
+      "source": 1191371,
+      "section": "coding",
+      "index": 0,
+      "topic": "shopping"
+    },
+    {
+      "source": 1191371,
+      "section": "coding",
+      "index": 1,
+      "topic": "cars"
+    },
+    {
+      "source": 1191371,
+      "section": "coding",
+      "index": 2,
+      "topic": "trails"
+    },
+    {
+      "source": 1190693,
+      "section": "behavioral",
+      "index": 0,
+      "topic": "bq"
+    },
+    {
+      "source": 1190693,
+      "section": "behavioral",
+      "index": 1,
+      "topic": "bq"
+    },
+    {
+      "source": 1190693,
+      "section": "behavioral",
+      "index": 2,
+      "topic": "bq"
+    },
+    {
+      "source": 1190693,
+      "section": "product_sense",
+      "index": 0,
+      "topic": "product"
+    },
+    {
+      "source": 1182950,
+      "section": "coding",
+      "index": 0,
+      "topic": "duplicates"
+    },
+    {
+      "source": 1182950,
+      "section": "coding",
+      "index": 1,
+      "topic": "merge"
+    },
+    {
+      "source": 1182119,
+      "section": "coding",
+      "index": 0,
+      "topic": "journey"
+    },
+    {
+      "source": 1182119,
+      "section": "system_design",
+      "index": 0,
+      "topic": "sd-messaging"
+    },
+    {
+      "source": 1181388,
+      "section": "coding",
+      "index": 0,
+      "topic": "sparse"
+    },
+    {
+      "source": 1181388,
+      "section": "coding",
+      "index": 1,
+      "topic": "knight"
+    },
+    {
+      "source": 1181388,
+      "section": "system_design",
+      "index": 0,
+      "topic": "sd-messaging"
+    },
+    {
+      "source": 1181062,
+      "section": "coding",
+      "index": 0,
+      "topic": "duplicates"
+    },
+    {
+      "source": 1181062,
+      "section": "coding",
+      "index": 1,
+      "topic": "unsafe"
+    },
+    {
+      "source": 1179933,
+      "section": "coding",
+      "index": 0,
+      "topic": "unknown-coding"
+    },
+    {
+      "source": 1179933,
+      "section": "system_design",
+      "index": 0,
+      "topic": "sd-leetcode"
+    },
+    {
+      "source": 1179398,
+      "section": "coding",
+      "index": 0,
+      "topic": "duplicates"
+    },
+    {
+      "source": 1179398,
+      "section": "coding",
+      "index": 1,
+      "topic": "squares"
+    },
+    {
+      "source": 1179398,
+      "section": "system_design",
+      "index": 0,
+      "topic": "sd-leetcode"
+    },
+    {
+      "source": 1177922,
+      "section": "coding",
+      "index": 0,
+      "topic": "unknown-coding"
+    },
+    {
+      "source": 1177922,
+      "section": "system_design",
+      "index": 0,
+      "topic": "sd-donation"
+    },
+    {
+      "source": 1177299,
+      "section": "coding",
+      "index": 0,
+      "topic": "duplicates"
+    },
+    {
+      "source": 1177299,
+      "section": "coding",
+      "index": 1,
+      "topic": "merge-squares"
+    },
+    {
+      "source": 1177299,
+      "section": "system_design",
+      "index": 0,
+      "topic": "sd-leetcode"
+    },
+    {
+      "source": 1176456,
+      "section": "coding",
+      "index": 0,
+      "topic": "tic"
+    },
+    {
+      "source": 1176456,
+      "section": "coding",
+      "index": 1,
+      "topic": "lists"
+    },
+    {
+      "source": 1176456,
+      "section": "coding",
+      "index": 2,
+      "topic": "unknown-coding"
+    },
+    {
+      "source": 1176456,
+      "section": "product_sense",
+      "index": 0,
+      "topic": "product"
+    },
+    {
+      "source": 1176409,
+      "section": "coding",
+      "index": 0,
+      "topic": "journey"
+    },
+    {
+      "source": 1174853,
+      "section": "system_design",
+      "index": 0,
+      "topic": "sd-leetcode"
+    },
+    {
+      "source": 1171016,
+      "section": "coding",
+      "index": 0,
+      "topic": "journey"
+    },
+    {
+      "source": 1169110,
+      "section": "coding",
+      "index": 0,
+      "topic": "unsafe"
+    },
+    {
+      "source": 1158651,
+      "section": "behavioral",
+      "index": 0,
+      "topic": "bq"
+    },
+    {
+      "source": 1158651,
+      "section": "product_sense",
+      "index": 0,
+      "topic": "product"
+    },
+    {
+      "source": 1153547,
+      "section": "coding",
+      "index": 0,
+      "topic": "badge"
+    },
+    {
+      "source": 1153547,
+      "section": "coding",
+      "index": 1,
+      "topic": "palindrome"
+    },
+    {
+      "source": 1153547,
+      "section": "coding",
+      "index": 2,
+      "topic": "notify"
+    },
+    {
+      "source": 1153547,
+      "section": "coding",
+      "index": 3,
+      "topic": "unsafe"
+    },
+    {
+      "source": 1153547,
+      "section": "product_sense",
+      "index": 0,
+      "topic": "unknown-product"
+    }
+  ]
+}
