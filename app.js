@@ -29,15 +29,15 @@ function render(){
   $('#cards').innerHTML=sources.map(s=>`<article class="card"><span class="tag">${esc(s.date)}</span><h2><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">#${s.id} ↗</a></h2><p>${esc(s.track)}</p><p class="muted small">关联主题：${D.topics.filter(t=>t.sources.some(x=>x.id===s.id)).map(t=>`<a href="#${t.id}">${esc(t.title)}</a>`).join(' / ')}</p></article>`).join('');
   return;
  }
- const entries=activeView==='checklist'?D.checklist.map(x=>({topic:topicById.get(x.topic),item:x})):D.topics.map(t=>({topic:t,item:null}));
+ const entries=(activeView==='checklist'||activeView==='bank')?D.checklist.filter(x=>x.view===(activeView==='bank'?'bank':'main')).map(x=>({topic:topicById.get(x.topic),item:x})):D.topics.map(t=>({topic:t,item:null}));
  const shown=entries.filter(({topic:t,item})=>(!q||JSON.stringify({t,item}).toLowerCase().includes(q))&&(!round||t.round===round)&&evidenceMatches(t,ev)&&(!only||!done[t.id]));
  const completed=entries.filter(e=>done[e.topic.id]).length;
  $('#status').textContent=`显示 ${shown.length} / ${entries.length} 项 · 本视图 ${completed} 已练习`;
- $('#view-help').textContent=activeView==='checklist'?'按你给出的 13 道 Coding + 2 道补充 + 4 道 SD 排列；不是按“命中频率”排序。':'含原有题目、补充题库、Mobile / BQ / Product；每项证据独立标注。';
+ $('#view-help').textContent=activeView==='checklist'?'按一手面经篇数降序（同数按最近日期）。不含 Karat、Mobile、未披露题；附带题库见下一个标签。':activeView==='bank'?'1182119 帖子附带的往期题库原顺序；不是该作者本场题，不计入一手频次。':'含全部题目（Karat、Mobile、未披露单独标注）；每项证据独立标注。';
  $('#cards').innerHTML=shown.map(({topic,item})=>card(topic,item)).join('')||'<p class="empty">没有匹配项目，试试清除筛选。</p>';
  document.querySelectorAll('[data-done]').forEach(e=>e.onchange=()=>{done[e.dataset.done]=e.checked;try{localStorage.setItem('whatnot-done-v1',JSON.stringify(done))}catch(x){}render()});
 }
-function openHash(){const id=decodeURIComponent(location.hash.slice(1));if(!topicById.has(id))return;clearFilters();setView(D.checklist.some(x=>x.topic===id)?'checklist':'all');document.getElementById(id)?.scrollIntoView({block:'start'})}
+function openHash(){const id=decodeURIComponent(location.hash.slice(1));if(!topicById.has(id))return;clearFilters();setView(D.checklist.some(x=>x.topic===id&&x.view==='main')?'checklist':D.checklist.some(x=>x.topic===id)?'bank':'all');document.getElementById(id)?.scrollIntoView({block:'start'})}
 document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{clearFilters();setView(b.dataset.view)});
 $('#query').oninput=render;$('#round').onchange=render;$('#evidence').onchange=render;$('#only').onchange=render;$('#clear').onclick=()=>{clearFilters();render()};
 window.addEventListener('hashchange',openHash);render();openHash();
