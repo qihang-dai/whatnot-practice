@@ -1,5 +1,9 @@
 # Whatnot Practice Map
 
-Authored practice summaries and outbound links only. No login-only source text, credentials or personal data.
+Stable site: https://qihang-dai.github.io/whatnot-practice/
 
-Open index.html. Source index window: 2025-10-27 through 2026-10-27. Links checked 2026-10-29; automated LeetCode access may be blocked by Cloudflare.
+V2: 19 checklist entries (15 Coding + 4 System Design), 34 total topics, 23 original source reports.
+
+The 13 Coding and 4 System Design entries appended to thread 1182119 are a secondary historical list, not the author's actual interview questions. That author reported User Log (streaming follow-up) and Messaging. Supplemental entries do not increase the 54 original report records.
+
+Only authored short summaries and outbound links are public. No login-only bodies, cookies or personal data. Completion progress stays on-device in localStorage.

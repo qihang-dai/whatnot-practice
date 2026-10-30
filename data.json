@@ -4,8 +4,12 @@
     "window": "2025-10-27 — 2026-10-27",
     "source_count": 23,
     "record_count": 54,
-    "topic_count": 26,
-    "privacy": "仅原创摘要和链接；未发布登录态、积分区原文、私有缓存或用户个人信息。"
+    "topic_count": 34,
+    "privacy": "仅原创摘要和链接；未发布登录态、积分区原文、私有缓存或用户个人信息。",
+    "version": 2,
+    "checklist_count": 19,
+    "secondary_item_count": 17,
+    "added_topic_count": 8
   },
   "topics": [
     {
@@ -25,9 +29,14 @@
           "title": "LeetCode 208",
           "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
           "note": "仅 Trie 基础，不是完整日志题；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+        },
+        {
+          "title": "LC 1152 · Analyze User Website Visit Pattern",
+          "url": "https://leetcode.com/problems/analyze-user-website-visit-pattern/",
+          "note": "仅日志排序/用户模式统计类比，非完整前缀树；Premium/Plus；访问/提交权限以站点为准"
         }
       ],
-      "follow": "部分原帖报告 streaming 输入；是否允许乱序/迟到事件要先确认，不能只在序列末尾追加。",
+      "follow": "部分原帖报告 streaming 输入；是否允许乱序/迟到事件要先确认，不能只在序列末尾追加。 LC1152 是固定长度访问模式的统计，不是任意长度 journey 前缀计数，不可直接照搬。",
       "sources": [
         {
           "id": 1194754,
@@ -79,7 +88,25 @@
           "index": 0,
           "topic": "journey"
         }
-      ]
+      ],
+      "patterns": [
+        "Trie",
+        "DFS",
+        "Log Aggregation"
+      ],
+      "supplementalSources": [
+        {
+          "id": 1182119,
+          "date": "2026-07-04",
+          "url": "https://www.1point3acres.com/home/thread/1182119",
+          "kind": "secondary",
+          "section": "Coding",
+          "item": 1,
+          "label": "帖子附带往期题库；不是该作者本场实际题目"
+        }
+      ],
+      "reportedSourceCount": 4,
+      "evidence": "reported"
     },
     {
       "id": "duplicates",
@@ -176,7 +203,24 @@
           "index": 0,
           "topic": "duplicates"
         }
-      ]
+      ],
+      "patterns": [
+        "Stack",
+        "Run Length"
+      ],
+      "supplementalSources": [
+        {
+          "id": 1182119,
+          "date": "2026-07-04",
+          "url": "https://www.1point3acres.com/home/thread/1182119",
+          "kind": "secondary",
+          "section": "Coding",
+          "item": 8,
+          "label": "帖子附带往期题库；不是该作者本场实际题目"
+        }
+      ],
+      "reportedSourceCount": 6,
+      "evidence": "reported"
     },
     {
       "id": "palindrome",
@@ -220,7 +264,24 @@
           "index": 1,
           "topic": "palindrome"
         }
-      ]
+      ],
+      "patterns": [
+        "Two Pointers",
+        "Memoization"
+      ],
+      "supplementalSources": [
+        {
+          "id": 1182119,
+          "date": "2026-07-04",
+          "url": "https://www.1point3acres.com/home/thread/1182119",
+          "kind": "secondary",
+          "section": "Coding",
+          "item": 3,
+          "label": "帖子附带往期题库；不是该作者本场实际题目"
+        }
+      ],
+      "reportedSourceCount": 2,
+      "evidence": "reported"
     },
     {
       "id": "knight",
@@ -231,7 +292,7 @@
       "drill": "935 先练 DP，再把初始状态改为指定 digit；确认 hops 与序列长度差 1。",
       "links": [
         {
-          "title": "LeetCode 935",
+          "title": "LC 935 · Knight Dialer",
           "url": "https://leetcode.com/problems/knight-dialer/",
           "note": "原题对所有起点求和；面经常给 start_digit；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
         }
@@ -264,7 +325,15 @@
           "index": 1,
           "topic": "knight"
         }
-      ]
+      ],
+      "patterns": [
+        "DP",
+        "Graph"
+      ],
+      "supplementalSources": [],
+      "reportedSourceCount": 2,
+      "evidence": "reported",
+      "userAdded": true
     },
     {
       "id": "sparse",
@@ -275,7 +344,7 @@
       "drill": "先写普通数组版，再做索引→值、双指针非零列表，并比较稠密×稀疏情况。",
       "links": [
         {
-          "title": "LeetCode 1570",
+          "title": "LC 1570 · Dot Product of Two Sparse Vectors",
           "url": "https://leetcode.com/problems/dot-product-of-two-sparse-vectors/",
           "note": "稀疏 follow-up 对应；可能需要 Premium；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
         }
@@ -296,7 +365,16 @@
           "index": 0,
           "topic": "sparse"
         }
-      ]
+      ],
+      "patterns": [
+        "Sparse Vector",
+        "HashMap",
+        "Two Pointers"
+      ],
+      "supplementalSources": [],
+      "reportedSourceCount": 1,
+      "evidence": "reported",
+      "userAdded": true
     },
     {
       "id": "merge",
@@ -328,7 +406,14 @@
           "index": 1,
           "topic": "merge"
         }
-      ]
+      ],
+      "patterns": [
+        "Two Pointers",
+        "Merge"
+      ],
+      "supplementalSources": [],
+      "reportedSourceCount": 1,
+      "evidence": "reported"
     },
     {
       "id": "squares",
@@ -360,15 +445,21 @@
           "index": 1,
           "topic": "squares"
         }
-      ]
+      ],
+      "patterns": [
+        "Two Pointers"
+      ],
+      "supplementalSources": [],
+      "reportedSourceCount": 1,
+      "evidence": "reported"
     },
     {
       "id": "merge-squares",
-      "title": "合并数组 + 平方的模糊变体",
+      "title": "Sorted Squares Merge · 两个有序数组平方后合并",
       "round": "Coding",
-      "match": "仅相关练习",
-      "summary": "一帖使用 LC 88 的谐音题号，并描述有序平方/负数追问；精确操作未披露。",
-      "drill": "把 88 与 977 分开做；不要把含糊描述修正成已经确认的原题。",
+      "match": "附带题库明确 / 一手细节不完整",
+      "summary": "按附带题库的明确描述：两个 sorted array 分别含可能为负的数，平方后输出合并有序结果。独立一手帖的措辞更模糊。",
+      "drill": "先做 977，再做 88。实现时可各生成有序平方序列再 merge；优化为直接合并前先解释四端点不变量，不必强行过度优化。",
       "links": [
         {
           "title": "LeetCode 88",
@@ -397,7 +488,24 @@
           "index": 1,
           "topic": "merge-squares"
         }
-      ]
+      ],
+      "patterns": [
+        "Two Pointers",
+        "Merge"
+      ],
+      "supplementalSources": [
+        {
+          "id": 1182119,
+          "date": "2026-07-04",
+          "url": "https://www.1point3acres.com/home/thread/1182119",
+          "kind": "secondary",
+          "section": "Coding",
+          "item": 4,
+          "label": "帖子附带往期题库；不是该作者本场实际题目"
+        }
+      ],
+      "reportedSourceCount": 1,
+      "evidence": "reported"
     },
     {
       "id": "unsafe",
@@ -458,7 +566,25 @@
           "index": 3,
           "topic": "unsafe"
         }
-      ]
+      ],
+      "patterns": [
+        "String",
+        "Set",
+        "Word-level Trie"
+      ],
+      "supplementalSources": [
+        {
+          "id": 1182119,
+          "date": "2026-07-04",
+          "url": "https://www.1point3acres.com/home/thread/1182119",
+          "kind": "secondary",
+          "section": "Coding",
+          "item": 2,
+          "label": "帖子附带往期题库；不是该作者本场实际题目"
+        }
+      ],
+      "reportedSourceCount": 3,
+      "evidence": "reported"
     },
     {
       "id": "notify",
@@ -490,7 +616,25 @@
           "index": 2,
           "topic": "notify"
         }
-      ]
+      ],
+      "patterns": [
+        "HashMap",
+        "Queue",
+        "Simulation"
+      ],
+      "supplementalSources": [
+        {
+          "id": 1182119,
+          "date": "2026-07-04",
+          "url": "https://www.1point3acres.com/home/thread/1182119",
+          "kind": "secondary",
+          "section": "Coding",
+          "item": 5,
+          "label": "帖子附带往期题库；不是该作者本场实际题目"
+        }
+      ],
+      "reportedSourceCount": 1,
+      "evidence": "reported"
     },
     {
       "id": "grid",
@@ -527,7 +671,15 @@
           "index": 0,
           "topic": "grid"
         }
-      ]
+      ],
+      "patterns": [
+        "BFS",
+        "DFS",
+        "Graph"
+      ],
+      "supplementalSources": [],
+      "reportedSourceCount": 1,
+      "evidence": "reported"
     },
     {
       "id": "shopping",
@@ -553,7 +705,14 @@
           "index": 0,
           "topic": "shopping"
         }
-      ]
+      ],
+      "patterns": [
+        "Set",
+        "Simulation"
+      ],
+      "supplementalSources": [],
+      "reportedSourceCount": 1,
+      "evidence": "reported"
     },
     {
       "id": "cars",
@@ -579,7 +738,14 @@
           "index": 1,
           "topic": "cars"
         }
-      ]
+      ],
+      "patterns": [
+        "Graph",
+        "Simulation"
+      ],
+      "supplementalSources": [],
+      "reportedSourceCount": 1,
+      "evidence": "reported"
     },
     {
       "id": "trails",
@@ -605,7 +771,14 @@
           "index": 2,
           "topic": "trails"
         }
-      ]
+      ],
+      "patterns": [
+        "DFS",
+        "Backtracking"
+      ],
+      "supplementalSources": [],
+      "reportedSourceCount": 1,
+      "evidence": "reported"
     },
     {
       "id": "badge",
@@ -637,7 +810,14 @@
           "index": 0,
           "topic": "badge"
         }
-      ]
+      ],
+      "patterns": [
+        "HashMap",
+        "Event Log"
+      ],
+      "supplementalSources": [],
+      "reportedSourceCount": 1,
+      "evidence": "reported"
     },
     {
       "id": "tic",
@@ -663,7 +843,14 @@
           "index": 0,
           "topic": "tic"
         }
-      ]
+      ],
+      "patterns": [
+        "Mobile",
+        "UI State"
+      ],
+      "supplementalSources": [],
+      "reportedSourceCount": 1,
+      "evidence": "reported"
     },
     {
       "id": "lists",
@@ -689,7 +876,14 @@
           "index": 1,
           "topic": "lists"
         }
-      ]
+      ],
+      "patterns": [
+        "Mobile",
+        "Shared State"
+      ],
+      "supplementalSources": [],
+      "reportedSourceCount": 1,
+      "evidence": "reported"
     },
     {
       "id": "unknown-coding",
@@ -763,7 +957,13 @@
           "index": 2,
           "topic": "unknown-coding"
         }
-      ]
+      ],
+      "patterns": [
+        "未披露"
+      ],
+      "supplementalSources": [],
+      "reportedSourceCount": 5,
+      "evidence": "unknown"
     },
     {
       "id": "sd-metrics",
@@ -807,7 +1007,14 @@
           "index": 0,
           "topic": "sd-metrics"
         }
-      ]
+      ],
+      "patterns": [
+        "Time Series",
+        "High Cardinality"
+      ],
+      "supplementalSources": [],
+      "reportedSourceCount": 2,
+      "evidence": "reported"
     },
     {
       "id": "sd-donation",
@@ -851,7 +1058,25 @@
           "index": 0,
           "topic": "sd-donation"
         }
-      ]
+      ],
+      "patterns": [
+        "Payment",
+        "MQ",
+        "Async Processing"
+      ],
+      "supplementalSources": [
+        {
+          "id": 1182119,
+          "date": "2026-07-04",
+          "url": "https://www.1point3acres.com/home/thread/1182119",
+          "kind": "secondary",
+          "section": "System Design",
+          "item": 2,
+          "label": "帖子附带往期题库；不是该作者本场实际题目"
+        }
+      ],
+      "reportedSourceCount": 2,
+      "evidence": "reported"
     },
     {
       "id": "sd-messaging",
@@ -895,7 +1120,25 @@
           "index": 0,
           "topic": "sd-messaging"
         }
-      ]
+      ],
+      "patterns": [
+        "Messaging",
+        "Realtime",
+        "Offline Delivery"
+      ],
+      "supplementalSources": [
+        {
+          "id": 1182119,
+          "date": "2026-07-04",
+          "url": "https://www.1point3acres.com/home/thread/1182119",
+          "kind": "secondary",
+          "section": "System Design",
+          "item": 4,
+          "label": "帖子附带往期题库；不是该作者本场实际题目"
+        }
+      ],
+      "reportedSourceCount": 2,
+      "evidence": "reported"
     },
     {
       "id": "sd-leetcode",
@@ -963,7 +1206,25 @@
           "index": 0,
           "topic": "sd-leetcode"
         }
-      ]
+      ],
+      "patterns": [
+        "Code Execution",
+        "Sandbox",
+        "Scale"
+      ],
+      "supplementalSources": [
+        {
+          "id": 1182119,
+          "date": "2026-07-04",
+          "url": "https://www.1point3acres.com/home/thread/1182119",
+          "kind": "secondary",
+          "section": "System Design",
+          "item": 1,
+          "label": "帖子附带往期题库；不是该作者本场实际题目"
+        }
+      ],
+      "reportedSourceCount": 4,
+      "evidence": "reported"
     },
     {
       "id": "unknown-sd",
@@ -989,7 +1250,13 @@
           "index": 0,
           "topic": "unknown-sd"
         }
-      ]
+      ],
+      "patterns": [
+        "未披露"
+      ],
+      "supplementalSources": [],
+      "reportedSourceCount": 1,
+      "evidence": "unknown"
     },
     {
       "id": "bq",
@@ -1045,7 +1312,14 @@
           "index": 0,
           "topic": "bq"
         }
-      ]
+      ],
+      "patterns": [
+        "Behavioral",
+        "Ownership"
+      ],
+      "supplementalSources": [],
+      "reportedSourceCount": 2,
+      "evidence": "reported"
     },
     {
       "id": "product",
@@ -1113,7 +1387,15 @@
           "index": 0,
           "topic": "product"
         }
-      ]
+      ],
+      "patterns": [
+        "Product Sense",
+        "Metrics",
+        "Experiment"
+      ],
+      "supplementalSources": [],
+      "reportedSourceCount": 4,
+      "evidence": "reported"
     },
     {
       "id": "unknown-product",
@@ -1139,7 +1421,301 @@
           "index": 0,
           "topic": "unknown-product"
         }
-      ]
+      ],
+      "patterns": [
+        "未披露"
+      ],
+      "supplementalSources": [],
+      "reportedSourceCount": 1,
+      "evidence": "unknown"
+    },
+    {
+      "id": "islands",
+      "title": "Number of Islands",
+      "round": "Coding",
+      "match": "题库对应 / 变体待确认",
+      "summary": "统计二维地图中的陆地连通块。",
+      "drill": "独立完成 LC200，明确四方向与 visited 策略；不要把“可达出口”算成同一个问题。",
+      "links": [
+        {
+          "title": "LC 200 · Number of Islands",
+          "url": "https://leetcode.com/problems/number-of-islands/",
+          "note": "附带题库列出此题；不代表该作者本场问到；访问/提交权限以站点为准"
+        }
+      ],
+      "follow": "",
+      "sources": [],
+      "records": [],
+      "patterns": [
+        "DFS",
+        "BFS",
+        "连通分量"
+      ],
+      "supplementalSources": [
+        {
+          "id": 1182119,
+          "date": "2026-07-04",
+          "url": "https://www.1point3acres.com/home/thread/1182119",
+          "kind": "secondary",
+          "section": "Coding",
+          "item": 6,
+          "label": "帖子附带往期题库；不是该作者本场实际题目"
+        }
+      ],
+      "reportedSourceCount": 0,
+      "evidence": "secondary"
+    },
+    {
+      "id": "matrix",
+      "title": "Search in Matrix / LC74 变体",
+      "round": "Coding",
+      "match": "题库对应 / 变体待确认",
+      "summary": "利用矩阵的排序性质查找目标。",
+      "drill": "先练 LC74 的整体有序矩阵二分。面试若只保证行列各自有序，不能沿用展平二分。",
+      "links": [
+        {
+          "title": "LC 74 · Search a 2D Matrix",
+          "url": "https://leetcode.com/problems/search-a-2d-matrix/",
+          "note": "练标准题；原面试变体的排序约束未披露；访问/提交权限以站点为准"
+        }
+      ],
+      "follow": "检查：空输入是否允许、行列尺寸、目标越界；变化后的约束先确认。",
+      "sources": [],
+      "records": [],
+      "patterns": [
+        "Binary Search",
+        "Matrix"
+      ],
+      "supplementalSources": [
+        {
+          "id": 1182119,
+          "date": "2026-07-04",
+          "url": "https://www.1point3acres.com/home/thread/1182119",
+          "kind": "secondary",
+          "section": "Coding",
+          "item": 7,
+          "label": "帖子附带往期题库；不是该作者本场实际题目"
+        }
+      ],
+      "reportedSourceCount": 0,
+      "evidence": "secondary"
+    },
+    {
+      "id": "bad-commit",
+      "title": "First Bad Commit",
+      "round": "Coding",
+      "match": "题库对应 / 变体待确认",
+      "summary": "在提交序列中定位第一个坏提交。",
+      "drill": "把 LC278 的版本号映射成 commit index；先确认好→坏单调性、是否保证有坏提交。",
+      "links": [
+        {
+          "title": "LC 278 · First Bad Version",
+          "url": "https://leetcode.com/problems/first-bad-version/",
+          "note": "标准原型；commit 列表版属于变体；访问/提交权限以站点为准"
+        }
+      ],
+      "follow": "不要假设 commit hash 自身可排序；二分的是给定提交顺序。",
+      "sources": [],
+      "records": [],
+      "patterns": [
+        "Binary Search",
+        "Monotonic Predicate"
+      ],
+      "supplementalSources": [
+        {
+          "id": 1182119,
+          "date": "2026-07-04",
+          "url": "https://www.1point3acres.com/home/thread/1182119",
+          "kind": "secondary",
+          "section": "Coding",
+          "item": 9,
+          "label": "帖子附带往期题库；不是该作者本场实际题目"
+        }
+      ],
+      "reportedSourceCount": 0,
+      "evidence": "secondary"
+    },
+    {
+      "id": "k-closest",
+      "title": "K Closest Points to Origin",
+      "round": "Coding",
+      "match": "题库对应 / 变体待确认",
+      "summary": "从平面点集中选离原点最近的 k 个。",
+      "drill": "先写 max-heap O(n log k)，再比较 quickselect 期望 O(n)。明确返回顺序与距离并列。",
+      "links": [
+        {
+          "title": "LC 973 · K Closest Points to Origin",
+          "url": "https://leetcode.com/problems/k-closest-points-to-origin/",
+          "note": "附带题库同名；不是近期独立一手报告；访问/提交权限以站点为准"
+        }
+      ],
+      "follow": "计算平方距离时注意数值范围；无须开平方。",
+      "sources": [],
+      "records": [],
+      "patterns": [
+        "Heap",
+        "Quickselect"
+      ],
+      "supplementalSources": [
+        {
+          "id": 1182119,
+          "date": "2026-07-04",
+          "url": "https://www.1point3acres.com/home/thread/1182119",
+          "kind": "secondary",
+          "section": "Coding",
+          "item": 10,
+          "label": "帖子附带往期题库；不是该作者本场实际题目"
+        }
+      ],
+      "reportedSourceCount": 0,
+      "evidence": "secondary"
+    },
+    {
+      "id": "submatrix",
+      "title": "Number of Submatrices That Sum to Target",
+      "round": "Coding",
+      "match": "题库对应 / 变体待确认",
+      "summary": "统计元素和等于 target 的非空子矩阵。",
+      "drill": "固定两条行/列边界，压缩成一维，再用前缀和计数；变体的具体约束未披露。",
+      "links": [
+        {
+          "title": "LC 1074 · Number of Submatrices That Sum to Target",
+          "url": "https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/",
+          "note": "练标准题；不声称已知完整变体；访问/提交权限以站点为准"
+        }
+      ],
+      "follow": "含负数时不能直接用普通单调滑动窗口；测试全零和单行矩阵。",
+      "sources": [],
+      "records": [],
+      "patterns": [
+        "Prefix Sum",
+        "HashMap",
+        "Matrix"
+      ],
+      "supplementalSources": [
+        {
+          "id": 1182119,
+          "date": "2026-07-04",
+          "url": "https://www.1point3acres.com/home/thread/1182119",
+          "kind": "secondary",
+          "section": "Coding",
+          "item": 11,
+          "label": "帖子附带往期题库；不是该作者本场实际题目"
+        }
+      ],
+      "reportedSourceCount": 0,
+      "evidence": "secondary"
+    },
+    {
+      "id": "min-window",
+      "title": "Minimum Window Substring",
+      "round": "Coding",
+      "match": "题库对应 / 变体待确认",
+      "summary": "求包含目标字符及其重复次数的最短子串。",
+      "drill": "写双指针与字符缺口计数，解释何时收缩窗口，覆盖重复字符和无解。",
+      "links": [
+        {
+          "title": "LC 76 · Minimum Window Substring",
+          "url": "https://leetcode.com/problems/minimum-window-substring/",
+          "note": "附带题库列出 LC76；没有新建近期一手命中；访问/提交权限以站点为准"
+        }
+      ],
+      "follow": "",
+      "sources": [],
+      "records": [],
+      "patterns": [
+        "Sliding Window",
+        "Frequency Map"
+      ],
+      "supplementalSources": [
+        {
+          "id": 1182119,
+          "date": "2026-07-04",
+          "url": "https://www.1point3acres.com/home/thread/1182119",
+          "kind": "secondary",
+          "section": "Coding",
+          "item": 12,
+          "label": "帖子附带往期题库；不是该作者本场实际题目"
+        }
+      ],
+      "reportedSourceCount": 0,
+      "evidence": "secondary"
+    },
+    {
+      "id": "anagrams",
+      "title": "Group Anagrams",
+      "round": "Coding",
+      "match": "题库对应 / 变体待确认",
+      "summary": "把字母异位词分组。",
+      "drill": "比较排序签名和频次签名；空串、重复输入、字符集限制先确认。",
+      "links": [
+        {
+          "title": "LC 49 · Group Anagrams",
+          "url": "https://leetcode.com/problems/group-anagrams/",
+          "note": "附带题库列出 LC49；不是该作者本场题；访问/提交权限以站点为准"
+        }
+      ],
+      "follow": "固定 26 个计数只适用于受限字母表；不要默认适用于任意 Unicode。",
+      "sources": [],
+      "records": [],
+      "patterns": [
+        "HashMap",
+        "Canonical Key"
+      ],
+      "supplementalSources": [
+        {
+          "id": 1182119,
+          "date": "2026-07-04",
+          "url": "https://www.1point3acres.com/home/thread/1182119",
+          "kind": "secondary",
+          "section": "Coding",
+          "item": 13,
+          "label": "帖子附带往期题库；不是该作者本场实际题目"
+        }
+      ],
+      "reportedSourceCount": 0,
+      "evidence": "secondary"
+    },
+    {
+      "id": "sd-feed",
+      "title": "Design Whatnot Homepage Feed",
+      "round": "System Design",
+      "match": "题库对应 / 变体待确认",
+      "summary": "设计直播电商首页内容流，需求需重新确认。",
+      "drill": "先用 News Feed 学分页、fan-out、缓存，再讨论 Whatnot 中直播状态和内容失效；推荐排序不是纯时间流的同义词。",
+      "links": [
+        {
+          "title": "Hello Interview · Facebook News Feed",
+          "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/fb-news-feed",
+          "note": "正文可读；社交时间流仅为相关设计，不是 Whatnot 首页原题"
+        },
+        {
+          "title": "Hack2Hire · Design News Feed",
+          "url": "https://www.hack2hire.com/question-bank/companies/whatnot/system-design/69ca9b37ff3ebde766ced8eb",
+          "note": "目录标 FREE；只作同类练习，不能用公司标签证明近期问过"
+        }
+      ],
+      "follow": "直播下线、个性化排序、曝光去重、guardrail 都是准备扩展；原帖题库只给主题。",
+      "sources": [],
+      "records": [],
+      "patterns": [
+        "Feed System",
+        "Fan-out",
+        "Ranking"
+      ],
+      "supplementalSources": [
+        {
+          "id": 1182119,
+          "date": "2026-07-04",
+          "url": "https://www.1point3acres.com/home/thread/1182119",
+          "kind": "secondary",
+          "section": "System Design",
+          "item": 3,
+          "label": "帖子附带往期题库；不是该作者本场实际题目"
+        }
+      ],
+      "reportedSourceCount": 0,
+      "evidence": "secondary"
     }
   ],
   "sources": [
@@ -1606,6 +2182,179 @@
       "section": "product_sense",
       "index": 0,
       "topic": "unknown-product"
+    }
+  ],
+  "checklist": [
+    {
+      "id": "Coding-1",
+      "topic": "journey",
+      "round": "Coding",
+      "number": 1,
+      "kind": "secondary",
+      "source": "https://www.1point3acres.com/home/thread/1182119",
+      "originLabel": "附带题库 #1"
+    },
+    {
+      "id": "Coding-2",
+      "topic": "unsafe",
+      "round": "Coding",
+      "number": 2,
+      "kind": "secondary",
+      "source": "https://www.1point3acres.com/home/thread/1182119",
+      "originLabel": "附带题库 #2"
+    },
+    {
+      "id": "Coding-3",
+      "topic": "palindrome",
+      "round": "Coding",
+      "number": 3,
+      "kind": "secondary",
+      "source": "https://www.1point3acres.com/home/thread/1182119",
+      "originLabel": "附带题库 #3"
+    },
+    {
+      "id": "Coding-4",
+      "topic": "merge-squares",
+      "round": "Coding",
+      "number": 4,
+      "kind": "secondary",
+      "source": "https://www.1point3acres.com/home/thread/1182119",
+      "originLabel": "附带题库 #4"
+    },
+    {
+      "id": "Coding-5",
+      "topic": "notify",
+      "round": "Coding",
+      "number": 5,
+      "kind": "secondary",
+      "source": "https://www.1point3acres.com/home/thread/1182119",
+      "originLabel": "附带题库 #5"
+    },
+    {
+      "id": "Coding-6",
+      "topic": "islands",
+      "round": "Coding",
+      "number": 6,
+      "kind": "secondary",
+      "source": "https://www.1point3acres.com/home/thread/1182119",
+      "originLabel": "附带题库 #6"
+    },
+    {
+      "id": "Coding-7",
+      "topic": "matrix",
+      "round": "Coding",
+      "number": 7,
+      "kind": "secondary",
+      "source": "https://www.1point3acres.com/home/thread/1182119",
+      "originLabel": "附带题库 #7"
+    },
+    {
+      "id": "Coding-8",
+      "topic": "duplicates",
+      "round": "Coding",
+      "number": 8,
+      "kind": "secondary",
+      "source": "https://www.1point3acres.com/home/thread/1182119",
+      "originLabel": "附带题库 #8"
+    },
+    {
+      "id": "Coding-9",
+      "topic": "bad-commit",
+      "round": "Coding",
+      "number": 9,
+      "kind": "secondary",
+      "source": "https://www.1point3acres.com/home/thread/1182119",
+      "originLabel": "附带题库 #9"
+    },
+    {
+      "id": "Coding-10",
+      "topic": "k-closest",
+      "round": "Coding",
+      "number": 10,
+      "kind": "secondary",
+      "source": "https://www.1point3acres.com/home/thread/1182119",
+      "originLabel": "附带题库 #10"
+    },
+    {
+      "id": "Coding-11",
+      "topic": "submatrix",
+      "round": "Coding",
+      "number": 11,
+      "kind": "secondary",
+      "source": "https://www.1point3acres.com/home/thread/1182119",
+      "originLabel": "附带题库 #11"
+    },
+    {
+      "id": "Coding-12",
+      "topic": "min-window",
+      "round": "Coding",
+      "number": 12,
+      "kind": "secondary",
+      "source": "https://www.1point3acres.com/home/thread/1182119",
+      "originLabel": "附带题库 #12"
+    },
+    {
+      "id": "Coding-13",
+      "topic": "anagrams",
+      "round": "Coding",
+      "number": 13,
+      "kind": "secondary",
+      "source": "https://www.1point3acres.com/home/thread/1182119",
+      "originLabel": "附带题库 #13"
+    },
+    {
+      "id": "self-sparse",
+      "topic": "sparse",
+      "round": "Coding",
+      "number": 14,
+      "kind": "self-found",
+      "source": null,
+      "originLabel": "你补充的练习入口；一手对照 #1181388"
+    },
+    {
+      "id": "self-knight",
+      "topic": "knight",
+      "round": "Coding",
+      "number": 15,
+      "kind": "self-found",
+      "source": null,
+      "originLabel": "你补充的练习入口；一手对照 #1181388"
+    },
+    {
+      "id": "System Design-1",
+      "topic": "sd-leetcode",
+      "round": "System Design",
+      "number": 1,
+      "kind": "secondary",
+      "source": "https://www.1point3acres.com/home/thread/1182119",
+      "originLabel": "附带题库 #1"
+    },
+    {
+      "id": "System Design-2",
+      "topic": "sd-donation",
+      "round": "System Design",
+      "number": 2,
+      "kind": "secondary",
+      "source": "https://www.1point3acres.com/home/thread/1182119",
+      "originLabel": "附带题库 #2"
+    },
+    {
+      "id": "System Design-3",
+      "topic": "sd-feed",
+      "round": "System Design",
+      "number": 3,
+      "kind": "secondary",
+      "source": "https://www.1point3acres.com/home/thread/1182119",
+      "originLabel": "附带题库 #3"
+    },
+    {
+      "id": "System Design-4",
+      "topic": "sd-messaging",
+      "round": "System Design",
+      "number": 4,
+      "kind": "secondary",
+      "source": "https://www.1point3acres.com/home/thread/1182119",
+      "originLabel": "附带题库 #4"
     }
   ]
 }
