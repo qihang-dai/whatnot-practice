@@ -4,14 +4,15 @@
   "window": "2025-10-27 — 2026-10-27",
   "source_count": 23,
   "record_count": 54,
-  "topic_count": 34,
+  "topic_count": 40,
   "privacy": "仅原创摘要和链接；未发布登录态、积分区原文、私有缓存或用户个人信息。",
   "version": 3,
   "checklist_count": 17,
   "secondary_item_count": 17,
   "added_topic_count": 8,
   "bank_count": 17,
-  "ranking": "主清单按一手面经篇数降序，同数按最近日期；Karat、Mobile、未披露单列；1182119 附带题库单独视图。"
+  "ranking": "主清单按一手面经篇数降序，同数按最近日期；Karat、Mobile、未披露单列；1182119 附带题库单独视图。",
+  "catalog_count": 6
  },
  "topics": [
   {
@@ -36,6 +37,11 @@
      "title": "LC 1152 · Analyze User Website Visit Pattern",
      "url": "https://leetcode.com/problems/analyze-user-website-visit-pattern/",
      "note": "仅日志排序/用户模式统计类比，非完整前缀树；Premium/Plus；访问/提交权限以站点为准"
+    },
+    {
+     "title": "FastPrep · 改写练习版",
+     "url": "https://www.fastprep.io/problems/whatnot-user-journey-paths",
+     "note": "约 75% 匹配（基于 Data Engineer 面经改写）；不是原题面"
     }
    ],
    "follow": "部分原帖报告 streaming 输入；是否允许乱序/迟到事件要先确认，不能只在序列末尾追加。 LC1152 是固定长度访问模式的统计，不是任意长度 journey 前缀计数，不可直接照搬。",
@@ -127,6 +133,11 @@
      "title": "LeetCode 1209",
      "url": "https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/",
      "note": "固定 k；不等同于无 k 整段删除；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+    },
+    {
+     "title": "FastPrep · 改写练习版",
+     "url": "https://www.fastprep.io/problems/whatnot-adjacent-pair-and-run-removal",
+     "note": "约 75%；含“无 k 整段删除”follow-up 的改写版；不是原题面"
     }
    ],
    "follow": "必须区别：删相邻一对 / 恰好 k 个 / 删除整段；不能把 1209 直接当所有 follow-up 的答案。",
@@ -236,6 +247,11 @@
      "title": "LeetCode 680",
      "url": "https://leetcode.com/problems/valid-palindrome-ii/",
      "note": "主问题明确报告；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+    },
+    {
+     "title": "FastPrep · 改写练习版",
+     "url": "https://www.fastprep.io/problems/whatnot-valid-palindrome-one-deletion",
+     "note": "约 98%；不含删 k 个 follow-up；不是原题面"
     }
    ],
    "follow": "k 版本不是简单把双指针循环重复 k 次。",
@@ -472,6 +488,11 @@
      "title": "LeetCode 977",
      "url": "https://leetcode.com/problems/squares-of-a-sorted-array/",
      "note": "只作负数平方技能覆盖；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+    },
+    {
+     "title": "FastPrep · 改写练习版",
+     "url": "https://www.fastprep.io/problems/whatnot-merge-sorted-squares-two-arrays",
+     "note": "约 95%；要求 O(m+n)；不是原题面"
     }
    ],
    "follow": "",
@@ -690,7 +711,13 @@
    "match": "未找到可靠同题",
    "summary": "根据商品店铺与 shopping list，最少次数买齐商品；约束不完整。",
    "drill": "回原帖确认 shop/item 映射与优化目标后再编码。不把它硬套为最短路或集合覆盖。",
-   "links": [],
+   "links": [
+    {
+     "title": "FastPrep · 改写练习版",
+     "url": "https://www.fastprep.io/problems/whatnot-minimum-stores-for-shopping-list",
+     "note": "New Grad 电面；规则为 FastPrep 补全"
+    }
+   ],
    "follow": "",
    "sources": [
     {
@@ -724,7 +751,13 @@
    "match": "未找到可靠同题",
    "summary": "给路线与 travel time，按最早到站车辆分配乘客。",
    "drill": "用原帖做模拟：算到达时间，再分配乘客。先确认同一时刻 tie-break、转乘和容量是否存在。",
-   "links": [],
+   "links": [
+    {
+     "title": "FastPrep · 改写练习版",
+     "url": "https://www.fastprep.io/problems/whatnot-earliest-car-passenger-assignments",
+     "note": "New Grad 电面；规则为 FastPrep 补全"
+    }
+   ],
    "follow": "",
    "sources": [
     {
@@ -758,7 +791,13 @@
    "match": "未找到可靠同题",
    "summary": "图中每条边最多经过一次，能否覆盖指定景点集合；不要求给定顺序。",
    "drill": "以原帖练 DFS + 回溯 + 已用边状态；不要误用只访问节点一次，或直接当 Euler 全边遍历。",
-   "links": [],
+   "links": [
+    {
+     "title": "FastPrep · 改写练习版",
+     "url": "https://www.fastprep.io/problems/whatnot-attraction-trail-route",
+     "note": "New Grad 电面；规则为 FastPrep 补全"
+    }
+   ],
    "follow": "",
    "sources": [
     {
@@ -1686,7 +1725,7 @@
    "id": "sd-feed",
    "title": "Design Whatnot Homepage Feed",
    "round": "System Design",
-   "match": "题库对应 / 变体待确认",
+   "match": "1182119 题库 + Hack2Hire 收录 · 无一手面经",
    "summary": "设计直播电商首页内容流，需求需重新确认。",
    "drill": "先用 News Feed 学分页、fan-out、缓存，再讨论 Whatnot 中直播状态和内容失效；推荐排序不是纯时间流的同义词。",
    "links": [
@@ -1722,6 +1761,162 @@
    ],
    "reportedSourceCount": 0,
    "evidence": "secondary"
+  },
+  {
+   "id": "transition-graph",
+   "title": "Build Transition Graph · 资源跳转概率",
+   "round": "Coding",
+   "match": "题库收录 · 无一手面经",
+   "summary": "乱序访问日志按用户分组、按时间排序，统计 START→r1→…→END 的转移次数，输出每个源的出边概率（两位小数、字典序）。",
+   "drill": "和 User Journey 同属“按用户整理日志”：先分组排序，再计数，最后按格式输出。注意时间戳是字符串，要按数值比较。",
+   "links": [
+    {
+     "title": "Hack2Hire · Build Transition Graph",
+     "url": "https://www.hack2hire.com/question-bank/companies/whatnot/coding-questions/6a221ee6981072682a6f1e06/practice?questionId=6a222b9c981072682a6f1e5a",
+     "note": "Screening · Easy · 约 3 周前报告；风格接近 Karat 题库"
+    }
+   ],
+   "follow": "",
+   "sources": [],
+   "records": [],
+   "patterns": [
+    "HashMap",
+    "Sorting",
+    "Log Aggregation"
+   ],
+   "supplementalSources": [],
+   "reportedSourceCount": 0,
+   "evidence": "catalog"
+  },
+  {
+   "id": "singer-roles",
+   "title": "Count Singer Role Co-occurrences",
+   "round": "Coding",
+   "match": "题库收录 · 无一手面经",
+   "summary": "按歌手分组，统计 period 年内同一歌手演过的不同角色对，双向计数后排序输出。",
+   "drill": "分组→组内两两配对→年份差检查→双向累加→排序。先问同一角色多次出演、同一对是否重复计数。",
+   "links": [
+    {
+     "title": "Hack2Hire · Count Singer Role Co-occurrences",
+     "url": "https://www.hack2hire.com/question-bank/companies/whatnot/coding-questions/6a21d6f7d5c5b3e5f9c345f0/practice?questionId=6a21d6fcd5c5b3e5f9c345f1",
+     "note": "Screening · Medium · 约 1 个月前；Karat 经典题"
+    }
+   ],
+   "follow": "",
+   "sources": [],
+   "records": [],
+   "patterns": [
+    "HashMap",
+    "Pairwise",
+    "Sorting"
+   ],
+   "supplementalSources": [],
+   "reportedSourceCount": 0,
+   "evidence": "catalog"
+  },
+  {
+   "id": "tile-moves",
+   "title": "Find Valid Tile Moves · R/B 棋盘最短路径",
+   "round": "Coding",
+   "match": "题库收录 · 无一手面经",
+   "summary": "一维棋盘，R 只能右移、B 只能左移，可滑入相邻空格或跳过一个异色棋子，BFS 求从 start 到 end 的最短状态序列。",
+   "drill": "状态=棋盘字符串，BFS + parent 回溯路径；先做不变量检查（R/B 数量、相对顺序）可提前判不可达。",
+   "links": [
+    {
+     "title": "Hack2Hire · Find Valid Tile Moves",
+     "url": "https://www.hack2hire.com/question-bank/companies/whatnot/coding-questions/6a21c264d5c5b3e5f9c34545/practice?questionId=6a21c269d5c5b3e5f9c34546",
+     "note": "Screening · Hard · 约 1 个月前；Karat 经典题"
+    }
+   ],
+   "follow": "",
+   "sources": [],
+   "records": [],
+   "patterns": [
+    "BFS",
+    "State Space",
+    "Path Reconstruction"
+   ],
+   "supplementalSources": [],
+   "reportedSourceCount": 0,
+   "evidence": "catalog"
+  },
+  {
+   "id": "teleporters",
+   "title": "Thrilling Teleporters · 掷骰 + 传送门",
+   "round": "Coding",
+   "match": "题库收录 · 无一手面经",
+   "summary": "从 currentSquare 掷 1..dieSides，越过终点停在终点，落在传送门只传一次，返回所有可能落点。",
+   "drill": "先写单回合模拟（HashMap 查传送门、Set 去重），follow-up 一般是多回合可达性 / 最少回合（BFS）。",
+   "links": [
+    {
+     "title": "Hack2Hire · Thrilling Teleporters",
+     "url": "https://www.hack2hire.com/question-bank/companies/whatnot/coding-questions/68c9aaec212d48d6e0f5977b/practice?questionId=68c9aaf3212d48d6e0f5977c",
+     "note": "Screening · Medium · 约 3 天前；Karat 经典题；含 1 个 follow-up"
+    }
+   ],
+   "follow": "",
+   "sources": [],
+   "records": [],
+   "patterns": [
+    "Simulation",
+    "HashMap",
+    "BFS"
+   ],
+   "supplementalSources": [],
+   "reportedSourceCount": 0,
+   "evidence": "catalog"
+  },
+  {
+   "id": "sd-notification",
+   "title": "Design Notification System",
+   "round": "System Design",
+   "match": "题库收录 · 无一手面经",
+   "summary": "Fan-out、突发流量控制、推送渠道（APNs/FCM/邮件）作为异步副作用，不是数据源。",
+   "drill": "讲事件→fan-out→队列→渠道 worker→重试/去重/限流；和 Metrics 的告警投递、Messaging 的离线通知可复用。",
+   "links": [
+    {
+     "title": "Hack2Hire · Design Notification System",
+     "url": "https://www.hack2hire.com/question-bank/companies/whatnot/system-design/69cfaa8f4f38b199f9e49615",
+     "note": "FREE · Onsite · Asked by +7（跨公司通用题）"
+    }
+   ],
+   "follow": "",
+   "sources": [],
+   "records": [],
+   "patterns": [
+    "Fan-out",
+    "MQ",
+    "Rate Limit"
+   ],
+   "supplementalSources": [],
+   "reportedSourceCount": 0,
+   "evidence": "catalog"
+  },
+  {
+   "id": "sd-kafka",
+   "title": "Design Kafka-like Message Queue",
+   "round": "System Design",
+   "match": "题库收录 · 无一手面经",
+   "summary": "分区、副本、append-only log、consumer group 与 offset、保留与重放。",
+   "drill": "重点：分区与有序性、leader/ISR 复制、ack 级别、消费 offset 提交、rebalance。",
+   "links": [
+    {
+     "title": "Hack2Hire · Kafka-like Distributed MQ",
+     "url": "https://www.hack2hire.com/question-bank/companies/whatnot/system-design/69ebc33b068f42e1550890b8",
+     "note": "需订阅 · Onsite · Hard · Asked by +2"
+    }
+   ],
+   "follow": "",
+   "sources": [],
+   "records": [],
+   "patterns": [
+    "Log",
+    "Replication",
+    "Partitioning"
+   ],
+   "supplementalSources": [],
+   "reportedSourceCount": 0,
+   "evidence": "catalog"
   }
  ],
  "sources": [

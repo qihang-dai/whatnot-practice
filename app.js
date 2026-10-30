@@ -6,7 +6,7 @@ let activeView='checklist';
 let done={};
 try{const v=JSON.parse(localStorage.getItem('whatnot-done-v1')||'{}');if(v&&typeof v==='object'&&!Array.isArray(v))done=v}catch(e){}
 const $=s=>document.querySelector(s);
-const evidenceName={reported:'有关联实际面经',secondary:'仅附带往期题库',unknown:'未披露 / 不可映射'};
+const evidenceName={reported:'有关联实际面经',secondary:'仅附带往期题库',unknown:'未披露 / 不可映射',catalog:'仅题库收录（Hack2Hire），无一手面经'};
 function evidenceMatches(t,value){return !value||value==='self-found'&&!!t.userAdded||value===t.evidence}
 function sourceLinks(t){
   const actual=t.sources.map(s=>`<a class="source" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.date)} · #${s.id} ↗</a>`).join('');
