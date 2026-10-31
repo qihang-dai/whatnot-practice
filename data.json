@@ -239,9 +239,9 @@
    "id": "palindrome",
    "title": "Valid Palindrome II → 最多删 k 个",
    "round": "Coding",
-   "match": "原题 + 变体",
+   "match": "原题（680）+ 原题（1216）",
    "summary": "判断最多删一个字符能否成回文；追问最多删 k 个。",
-   "drill": "680 限时做，再讲 k 版本状态与记忆化；大 k 讨论动态规划复杂度。",
+   "drill": "680 限时做（双指针，删一次）；再做 1216：最多删 k 个 ⇔ n − LPS(s) ≤ k，LPS 用区间 DP O(n²)；也可记忆化 (i, j, k) 双指针，但讲清复杂度。",
    "links": [
     {
      "title": "LeetCode 680",
@@ -249,12 +249,17 @@
      "note": "主问题明确报告；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
     },
     {
+     "title": "LeetCode 1216 · Valid Palindrome III",
+     "url": "https://leetcode.com/problems/valid-palindrome-iii/",
+     "note": "就是“最多删 k 个”follow-up 的原题；Premium"
+    },
+    {
      "title": "FastPrep · 改写练习版",
      "url": "https://www.fastprep.io/problems/whatnot-valid-palindrome-one-deletion",
      "note": "约 98%；不含删 k 个 follow-up；不是原题面"
     }
    ],
-   "follow": "k 版本不是简单把双指针循环重复 k 次。",
+   "follow": "k 版本不能把双指针循环重复 k 次（贪心删哪边不确定）；标准解法是最长回文子序列 / 区间 DP。",
    "sources": [
     {
      "id": 1193667,
