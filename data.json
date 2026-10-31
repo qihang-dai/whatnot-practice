@@ -668,10 +668,20 @@
    "id": "grid",
    "title": "障碍 Grid → 最短路 / 可达出口",
    "round": "Coding",
-   "match": "仅相关练习",
-   "summary": "逐步扩展的障碍地图题，具体方向/出口语义不完整。",
-   "drill": "BFS 最短路与 DFS 可达性各练一题；先确认四方向/八方向、起终点、出口定义。",
+   "match": "原帖三问 · 细节未披露",
+   "summary": "n×n 含障碍 grid，同一张图逐步加问：① 统计每行/每列障碍数 ② 起点出发最短路径 ③ 所有可达出口（楼主自己标注 lc 200）。",
+   "drill": "三问一张图：先 O(n²) 计数；再 BFS 最短路（4 方向，visited 在入队时标记）；最后从起点 BFS/DFS 收集所有边界/出口格。开头确认方向数、出口定义（边界格？特殊标记？）、起点。",
    "links": [
+    {
+     "title": "1P3A 题库 · Find All Reachable Exits in a Grid",
+     "url": "https://www.1point3acres.com/interview/problems/f8183950-8631-5902-8a8a-188ca39c2c4f",
+     "note": "第③问；会员可见完整题面；标 Single report，应就是 #1193987"
+    },
+    {
+     "title": "1P3A 题库 · Count Obstacles in Each Row and Column",
+     "url": "https://www.1point3acres.com/interview/problems/0140300f-bc24-5a7d-b104-b5ecb597c3a6",
+     "note": "第①问；会员可见完整题面；标 Single report，应就是 #1193987"
+    },
     {
      "title": "LeetCode 1091",
      "url": "https://leetcode.com/problems/shortest-path-in-binary-matrix/",
@@ -680,10 +690,10 @@
     {
      "title": "LeetCode 200",
      "url": "https://leetcode.com/problems/number-of-islands/",
-     "note": "只练连通遍历；不等于可达出口；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+     "note": "楼主原文给的题号（第③问）；可达出口=从起点做连通遍历"
     }
    ],
-   "follow": "",
+   "follow": "原帖只给了三问的标题，输入格式和出口定义未披露。",
    "sources": [
     {
      "id": 1193987,
