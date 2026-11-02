@@ -90,16 +90,31 @@
     saveLocal();
     if(get(K_TOKEN)){status('待同步…','busy');clearTimeout(pushTimer);pushTimer=setTimeout(sync,1000)}
   };
+  // Inline setup panel (no prompt(): Chrome auto-dismisses dialogs when you switch tabs).
   window.WN_syncSetup=function(){
+    let p=document.getElementById('sync-panel');
+    if(p){p.remove();return}
     const cur=get(K_TOKEN);
-    if(!cur)window.open('https://github.com/settings/tokens/new?scopes=gist&description=whatnot-practice-sync','_blank','noopener');
-    const msg=cur
-      ?'已连接。粘贴新 token 替换；留空并确定 = 断开同步（本机进度保留）。'
-      :'已在新标签页打开 GitHub：gist 权限已勾好，选个有效期（可选 No expiration），点 Generate token，复制 ghp_ 开头的 token 粘到这里。\n两台电脑各粘贴一次即可；token 只保存在本浏览器。';
-    const v=prompt(msg,'');
-    if(v===null)return;
-    if(!v.trim()){if(cur&&confirm('断开同步？')){set(K_TOKEN,null);set(K_GIST,null);status('仅本机保存 · 未连接同步','off')}return}
-    set(K_TOKEN,v.trim());set(K_GIST,null);sync();
+    p=document.createElement('div');
+    p.id='sync-panel';
+    p.innerHTML=
+      '<p><b>跨设备同步</b>（Mac / Windows 各设置一次）</p>'+
+      '<ol><li><a href="https://github.com/settings/tokens/new?scopes=gist&description=whatnot-practice-sync" target="_blank" rel="noopener">打开 GitHub 生成 token ↗</a>：gist 权限已勾好，选有效期，点 <b>Generate token</b>，复制 <code>ghp_</code> 开头的字符串。</li>'+
+      '<li>回到这里粘贴并保存：</li></ol>'+
+      '<div class="row"><input id="sync-token" type="password" autocomplete="off" spellcheck="false" placeholder="'+(cur?'已连接；粘贴新 token 可替换':'ghp_…')+'">'+
+      '<button type="button" id="sync-save">保存并同步</button>'+
+      (cur?'<button type="button" id="sync-off">断开同步</button>':'')+
+      '<button type="button" id="sync-close">关闭</button></div>'+
+      '<p class="small muted">token 只保存在本浏览器的 localStorage，只用于读写你自己的私有 gist。</p>';
+    const bar=document.querySelector('.toolbar');
+    bar.parentNode.insertBefore(p,bar.nextSibling);
+    const inp=p.querySelector('#sync-token');inp.focus();
+    const save=()=>{const v=inp.value.trim();if(!v){inp.focus();return}set(K_TOKEN,v);set(K_GIST,null);p.remove();sync()};
+    p.querySelector('#sync-save').onclick=save;
+    inp.onkeydown=e=>{if(e.key==='Enter')save()};
+    p.querySelector('#sync-close').onclick=()=>p.remove();
+    const off=p.querySelector('#sync-off');
+    if(off)off.onclick=()=>{set(K_TOKEN,null);set(K_GIST,null);p.remove();status('仅本机保存 · 未连接同步','off')};
   };
   document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')sync()});
   window.addEventListener('focus',()=>sync());
