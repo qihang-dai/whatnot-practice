@@ -92,9 +92,10 @@
   };
   window.WN_syncSetup=function(){
     const cur=get(K_TOKEN);
+    if(!cur)window.open('https://github.com/settings/tokens/new?scopes=gist&description=whatnot-practice-sync','_blank','noopener');
     const msg=cur
       ?'已连接。粘贴新 token 替换；留空并确定 = 断开同步（本机进度保留）。'
-      :'粘贴 GitHub fine-grained token（Account permissions → Gists: Read and write）。\n两台电脑各粘贴一次即可；token 只保存在本浏览器。';
+      :'已在新标签页打开 GitHub：gist 权限已勾好，选个有效期（可选 No expiration），点 Generate token，复制 ghp_ 开头的 token 粘到这里。\n两台电脑各粘贴一次即可；token 只保存在本浏览器。';
     const v=prompt(msg,'');
     if(v===null)return;
     if(!v.trim()){if(cur&&confirm('断开同步？')){set(K_TOKEN,null);set(K_GIST,null);status('仅本机保存 · 未连接同步','off')}return}
