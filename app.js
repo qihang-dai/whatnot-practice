@@ -35,9 +35,11 @@ function render(){
  $('#status').textContent=`显示 ${shown.length} / ${entries.length} 项 · 本视图 ${completed} 已练习`;
  $('#view-help').textContent=activeView==='checklist'?'按一手面经篇数降序（同数按最近日期）。不含 Karat、Mobile、未披露题；附带题库见下一个标签。':activeView==='bank'?'1182119 帖子附带的往期题库原顺序；不是该作者本场题，不计入一手频次。':'含全部题目（Karat、Mobile、未披露单独标注）；每项证据独立标注。';
  $('#cards').innerHTML=shown.map(({topic,item})=>card(topic,item)).join('')||'<p class="empty">没有匹配项目，试试清除筛选。</p>';
- document.querySelectorAll('[data-done]').forEach(e=>e.onchange=()=>{done[e.dataset.done]=e.checked;try{localStorage.setItem('whatnot-done-v1',JSON.stringify(done))}catch(x){}render()});
+ document.querySelectorAll('[data-done]').forEach(e=>e.onchange=()=>{done[e.dataset.done]=e.checked;if(window.WN_mark)window.WN_mark(e.dataset.done,e.checked);else try{localStorage.setItem('whatnot-done-v1',JSON.stringify(done))}catch(x){}render()});
 }
 function openHash(){const id=decodeURIComponent(location.hash.slice(1));if(!topicById.has(id))return;clearFilters();setView(D.checklist.some(x=>x.topic===id&&x.view==='main')?'checklist':D.checklist.some(x=>x.topic===id)?'bank':'all');document.getElementById(id)?.scrollIntoView({block:'start'})}
 document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{clearFilters();setView(b.dataset.view)});
 $('#query').oninput=render;$('#round').onchange=render;$('#evidence').onchange=render;$('#only').onchange=render;$('#clear').onclick=()=>{clearFilters();render()};
 window.addEventListener('hashchange',openHash);render();openHash();
+
+window.WN_setDone=function(d){const y=window.scrollY;done=d;render();window.scrollTo(0,y)};
