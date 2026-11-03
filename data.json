@@ -1088,6 +1088,11 @@
      "title": "Hack2Hire · Online Donation Service",
      "url": "https://www.hack2hire.com/question-bank/companies/whatnot/system-design/69e45d03ad1522fdaff14ac5",
      "note": "公开引言可读；完整文章需要订阅"
+    },
+    {
+     "title": "Hello Interview · Payment System (Stripe)",
+     "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/payment-system",
+     "note": "相关：第三方支付、异步状态、幂等；不是捐款原题"
     }
    ],
    "follow": "一帖明确“不用 webhook”；不要强行照教程引入 webhook。",
@@ -1208,6 +1213,11 @@
    "summary": "提交并运行用户代码，判题；部分报告扩展到比赛。",
    "drill": "优先讲安全执行、任务队列、测试数据和结果存储，再练比赛突发流量。",
    "links": [
+    {
+     "title": "Hello Interview · Design LeetCode",
+     "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/leetcode",
+     "note": "同题完整拆解（代码执行沙箱、判题队列、比赛排行榜）"
+    },
     {
      "title": "Hack2Hire · Design Leetcode",
      "url": "https://www.hack2hire.com/question-bank/companies/whatnot/system-design/69d98d1ed94fcdd01529ff91",
@@ -1890,6 +1900,11 @@
    "drill": "讲事件→fan-out→队列→渠道 worker→重试/去重/限流；和 Metrics 的告警投递、Messaging 的离线通知可复用。",
    "links": [
     {
+     "title": "Hello Interview · Notification System",
+     "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/notification-system",
+     "note": "同题完整拆解"
+    },
+    {
      "title": "Hack2Hire · Design Notification System",
      "url": "https://www.hack2hire.com/question-bank/companies/whatnot/system-design/69cfaa8f4f38b199f9e49615",
      "note": "FREE · Onsite · Asked by +7（跨公司通用题）"
@@ -1919,6 +1934,11 @@
      "title": "Hack2Hire · Kafka-like Distributed MQ",
      "url": "https://www.hack2hire.com/question-bank/companies/whatnot/system-design/69ebc33b068f42e1550890b8",
      "note": "需订阅 · Onsite · Hard · Asked by +2"
+    },
+    {
+     "title": "Hello Interview · Kafka Deep Dive",
+     "url": "https://www.hellointerview.com/learn/system-design/deep-dives/kafka",
+     "note": "HI 无此题的 breakdown；用 Kafka 原理深挖代替"
     }
    ],
    "follow": "",
