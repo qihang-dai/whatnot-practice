@@ -4,7 +4,7 @@
   "window": "2025-10-27 — 2026-10-27",
   "source_count": 23,
   "record_count": 54,
-  "topic_count": 40,
+  "topic_count": 43,
   "privacy": "仅原创摘要和链接；未发布登录态、积分区原文、私有缓存或用户个人信息。",
   "version": 3,
   "checklist_count": 20,
@@ -138,6 +138,11 @@
      "title": "FastPrep · 改写练习版",
      "url": "https://www.fastprep.io/problems/whatnot-adjacent-pair-and-run-removal",
      "note": "约 75%；含“无 k 整段删除”follow-up 的改写版；不是原题面"
+    },
+    {
+     "title": "Hello Interview 社区 · Whatnot · LC 1209",
+     "url": "https://www.hellointerview.com/community/questions/remove-adjacent-duplicates-string/cm5eguhad02xz838oiddaz8xx",
+     "note": "Whatnot 页面：1 人报告，2026 年 9 月中（Staff）"
     }
    ],
    "follow": "必须区别：删相邻一对 / 恰好 k 个 / 删除整段；不能把 1209 直接当所有 follow-up 的答案。",
@@ -626,6 +631,11 @@
      "title": "LeetCode 359",
      "url": "https://leetcode.com/problems/logger-rate-limiter/",
      "note": "仅 cooldown 技能相近；不覆盖每日不同消息 quota；可能需 Premium；自动访问可能触发 Cloudflare；以打开后的权限提示为准"
+    },
+    {
+     "title": "Hello Interview 社区 · Whatnot · LC 359",
+     "url": "https://www.hellointerview.com/community/questions/logger-rate-limiter/cm5eh7nri04wz838onqhny0wc",
+     "note": "Whatnot 页面：1 人报告，2026 年 9 月中（Staff）"
     }
    ],
    "follow": "不能把标准 Logger Rate Limiter 等同于完整面经题。",
@@ -1037,6 +1047,11 @@
      "title": "Hello Interview · Metrics Monitoring",
      "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/metrics-monitoring",
      "note": "正文可见；完整视频需要 Premium"
+    },
+    {
+     "title": "FastPrep · Global Metrics Monitoring & Alerting",
+     "url": "https://www.fastprep.io/system-design/global-service-metrics-monitoring-and-alerting",
+     "note": "10 家公司共用题；Last seen 是跨公司时间"
     }
    ],
    "follow": "time-series DB 选择与 series explosion 是原帖明确追问。",
@@ -1093,6 +1108,16 @@
      "title": "Hello Interview · Payment System (Stripe)",
      "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/payment-system",
      "note": "相关：第三方支付、异步状态、幂等；不是捐款原题"
+    },
+    {
+     "title": "Hello Interview 社区 · Whatnot · Donations Website",
+     "url": "https://www.hellointerview.com/community/questions/donations-website-charities/cmbdisew101kuad08fuuiky5v",
+     "note": "Whatnot 页面：3 人报告，最近 2026 年 8 月中；24–48h 捐款站、支付失败与备用支付"
+    },
+    {
+     "title": "FastPrep · Donation Platform",
+     "url": "https://www.fastprep.io/system-design/donation-platform",
+     "note": "标 Lyft + WhatNot；幂等扣款、回调乱序、payout 对账"
     }
    ],
    "follow": "一帖明确“不用 webhook”；不要强行照教程引入 webhook。",
@@ -1155,6 +1180,11 @@
      "title": "Hello Interview · WhatsApp",
      "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/whatsapp",
      "note": "正文可读；教程范围含群聊，面经未必要求"
+    },
+    {
+     "title": "Hello Interview 社区 · Whatnot · Chat/Messaging",
+     "url": "https://www.hellointerview.com/community/questions/messenger-chat-system/cm4szunov00303g2e2gomqo2j",
+     "note": "Whatnot 页面：1 人报告，2026 年 4 月初"
     }
    ],
    "follow": "",
@@ -1222,6 +1252,11 @@
      "title": "Hack2Hire · Design Leetcode",
      "url": "https://www.hack2hire.com/question-bank/companies/whatnot/system-design/69d98d1ed94fcdd01529ff91",
      "note": "页面标 FREE；登录才能保存进度/答 quiz"
+    },
+    {
+     "title": "Hello Interview 社区 · Whatnot · Design LeetCode",
+     "url": "https://www.hellointerview.com/community/questions/coding-contest-platform/cm4szs6ae002w3g2e09amf982",
+     "note": "Whatnot 页面：11 人报告，最近 2026 年 9 月中"
     }
    ],
    "follow": "原帖明确追问包括 signed URL、比赛扩容、运行提交代码、DB 选择；来自不同报告，不是一场面试全部问到。",
@@ -1908,6 +1943,11 @@
      "title": "Hack2Hire · Design Notification System",
      "url": "https://www.hack2hire.com/question-bank/companies/whatnot/system-design/69cfaa8f4f38b199f9e49615",
      "note": "FREE · Onsite · Asked by +7（跨公司通用题）"
+    },
+    {
+     "title": "FastPrep · Event-Driven Notification System",
+     "url": "https://www.fastprep.io/system-design/event-driven-notification-system",
+     "note": "12 家公司共用题（含 WhatNot）；Last seen Sep 2026 是跨公司时间"
     }
    ],
    "follow": "",
@@ -1948,6 +1988,89 @@
     "Log",
     "Replication",
     "Partitioning"
+   ],
+   "supplementalSources": [],
+   "reportedSourceCount": 0,
+   "evidence": "catalog"
+  },
+  {
+   "id": "sd-collab-doc",
+   "title": "Design a Collaborative Document Editor（Google Docs 类）",
+   "round": "System Design",
+   "match": "FastPrep 收录 · 无 Whatnot 一手面经",
+   "summary": "多人实时编辑文本和可视对象，presence/光标、并发收敛（OT vs CRDT）、快照+增量的版本历史、锚定评论。",
+   "drill": "先讲连接层（WebSocket + 按文档 ID 路由）、单文档串行化/OT 或 CRDT 的取舍，再讲快照+操作日志、评论锚点失效。",
+   "links": [
+    {
+     "title": "FastPrep · Collaborative Document Editor",
+     "url": "https://www.fastprep.io/system-design/collaborative-document-editor",
+     "note": "13 家公司共用题（含 WhatNot），Phone screen + Onsite；Last seen Oct 2026 为跨公司时间"
+    },
+    {
+     "title": "Hello Interview · Google Docs",
+     "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/google-docs",
+     "note": "同类完整拆解"
+    }
+   ],
+   "follow": "",
+   "sources": [],
+   "records": [],
+   "patterns": [
+    "Realtime",
+    "OT/CRDT",
+    "WebSocket"
+   ],
+   "supplementalSources": [],
+   "reportedSourceCount": 0,
+   "evidence": "catalog"
+  },
+  {
+   "id": "sd-livestream-ranking",
+   "title": "Design a Livestream Ranking Serving API",
+   "round": "System Design",
+   "match": "FastPrep 只标 WhatNot · 2023 年旧题",
+   "summary": "发现页请求排序后的直播列表：最多 200 个候选、调用现有模型打分、返回 20 个；直播状态 30 秒内新鲜，打分失败时返回明确标记的降级排序。",
+   "drill": "重点是 serving 路径：候选→资格过滤（live/可见、新鲜度）→打分→降级策略→缓存，p95 200ms、1 万 QPS。",
+   "links": [
+    {
+     "title": "FastPrep · Livestream Ranking Serving API",
+     "url": "https://www.fastprep.io/system-design/livestream-ranking-serving-api",
+     "note": "只标 WhatNot；Phone screen；Last seen Jul 2023（旧）"
+    }
+   ],
+   "follow": "",
+   "sources": [],
+   "records": [],
+   "patterns": [
+    "Serving",
+    "Ranking",
+    "Fallback"
+   ],
+   "supplementalSources": [],
+   "reportedSourceCount": 0,
+   "evidence": "catalog"
+  },
+  {
+   "id": "sd-json-ingestion",
+   "title": "Daily JSON Ingestion into a Data Warehouse",
+   "round": "System Design",
+   "match": "FastPrep 只标 WhatNot · 2023 年 · 偏 DE",
+   "summary": "每天一个最大 10GB 的 JSON 文件，校验、映射、原子发布到按天分区的数仓表，重试不重复。",
+   "drill": "偏数据工程岗：完成标记、幂等 run ID、staging + 原子切换。SWE 优先级低。",
+   "links": [
+    {
+     "title": "FastPrep · Daily JSON Warehouse Ingestion",
+     "url": "https://www.fastprep.io/system-design/daily-json-warehouse-ingestion",
+     "note": "只标 WhatNot；Onsite；Last seen Jun 2023；疑似数据工程岗"
+    }
+   ],
+   "follow": "",
+   "sources": [],
+   "records": [],
+   "patterns": [
+    "Batch",
+    "Idempotency",
+    "Data Warehouse"
    ],
    "supplementalSources": [],
    "reportedSourceCount": 0,
@@ -2538,7 +2661,7 @@
    "number": 1,
    "kind": "first-hand",
    "source": null,
-   "originLabel": "一手面经 4 篇 · 最近 2026-06-11",
+   "originLabel": "一手面经 4 篇 · 最近 2026-06-11 · HI 社区 11 人报告",
    "view": "main"
   },
   {
@@ -2558,7 +2681,7 @@
    "number": 3,
    "kind": "first-hand",
    "source": null,
-   "originLabel": "一手面经 2 篇 · 最近 2026-10-14",
+   "originLabel": "一手面经 2 篇 · 最近 2026-10-14 · HI 社区 3 人报告",
    "view": "main"
   },
   {
@@ -2592,13 +2715,13 @@
    "view": "main"
   },
   {
-   "id": "main-sd-kafka",
-   "topic": "sd-kafka",
+   "id": "main-sd-collab-doc",
+   "topic": "sd-collab-doc",
    "round": "System Design",
    "number": 7,
    "kind": "catalog",
    "source": null,
-   "originLabel": "Hack2Hire 收录 · Asked by 2+ 家 · 无一手面经",
+   "originLabel": "FastPrep 收录 · 13 家公司共用 · 无一手面经",
    "view": "main"
   },
   {
