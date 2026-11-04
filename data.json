@@ -7,7 +7,7 @@
   "topic_count": 40,
   "privacy": "仅原创摘要和链接；未发布登录态、积分区原文、私有缓存或用户个人信息。",
   "version": 3,
-  "checklist_count": 17,
+  "checklist_count": 20,
   "secondary_item_count": 17,
   "added_topic_count": 8,
   "bank_count": 17,
@@ -2569,6 +2569,36 @@
    "kind": "first-hand",
    "source": null,
    "originLabel": "一手面经 2 篇 · 最近 2026-07-04",
+   "view": "main"
+  },
+  {
+   "id": "main-sd-notification",
+   "topic": "sd-notification",
+   "round": "System Design",
+   "number": 5,
+   "kind": "catalog",
+   "source": null,
+   "originLabel": "Hack2Hire 收录 · Asked by 7+ 家 · 无一手面经",
+   "view": "main"
+  },
+  {
+   "id": "main-sd-feed",
+   "topic": "sd-feed",
+   "round": "System Design",
+   "number": 6,
+   "kind": "catalog",
+   "source": null,
+   "originLabel": "1182119 题库 + Hack2Hire 收录 · 无一手面经",
+   "view": "main"
+  },
+  {
+   "id": "main-sd-kafka",
+   "topic": "sd-kafka",
+   "round": "System Design",
+   "number": 7,
+   "kind": "catalog",
+   "source": null,
+   "originLabel": "Hack2Hire 收录 · Asked by 2+ 家 · 无一手面经",
    "view": "main"
   },
   {

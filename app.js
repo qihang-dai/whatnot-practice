@@ -33,7 +33,7 @@ function render(){
  const shown=entries.filter(({topic:t,item})=>(!q||JSON.stringify({t,item}).toLowerCase().includes(q))&&(!round||t.round===round)&&evidenceMatches(t,ev)&&(!only||!done[t.id]));
  const completed=entries.filter(e=>done[e.topic.id]).length;
  $('#status').textContent=`显示 ${shown.length} / ${entries.length} 项 · 本视图 ${completed} 已练习`;
- $('#view-help').textContent=activeView==='checklist'?'按一手面经篇数降序（同数按最近日期）。不含 Karat、Mobile、未披露题；附带题库见下一个标签。':activeView==='bank'?'1182119 帖子附带的往期题库原顺序；不是该作者本场题，不计入一手频次。':'含全部题目（Karat、Mobile、未披露单独标注）；每项证据独立标注。';
+ $('#view-help').textContent=activeView==='checklist'?'按一手面经篇数降序（同数按最近日期）；SD 末尾 3 道为题库补充（无一手面经）。Karat、Mobile、未披露题见“全部主题”。':activeView==='bank'?'1182119 帖子附带的往期题库原顺序；不是该作者本场题，不计入一手频次。':'含全部题目（Karat、Mobile、未披露单独标注）；每项证据独立标注。';
  $('#cards').innerHTML=shown.map(({topic,item})=>card(topic,item)).join('')||'<p class="empty">没有匹配项目，试试清除筛选。</p>';
  document.querySelectorAll('[data-done]').forEach(e=>e.onchange=()=>{done[e.dataset.done]=e.checked;if(window.WN_mark)window.WN_mark(e.dataset.done,e.checked);else try{localStorage.setItem('whatnot-done-v1',JSON.stringify(done))}catch(x){}render()});
 }
